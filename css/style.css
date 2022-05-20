@@ -13,6 +13,10 @@
   justify-content: start;
 }
 
+:root {
+  color-scheme: dark;
+}
+
 /* Normal desktop :1200px. */
 /* Normal desktop :992px. */
 /* Tablet desktop :768px. */
