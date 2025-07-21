@@ -768,6 +768,13 @@ if (menuButton && menuDropdown) {
         menuDropdown.classList.toggle('hidden');
         menuIcon.classList.toggle('animate-spin-slow');
     });
+    // Close menu when a link is clicked
+    menuDropdown.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuDropdown.classList.add('hidden');
+            menuIcon.classList.remove('animate-spin-slow');
+        });
+    });
 }
 </script>
 <style>
