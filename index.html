@@ -29,6 +29,9 @@
 
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -39,7 +42,7 @@
     <!-- header-start -->
     <header>
         <div class="header-area ">
-            <div id="sticky-header" class="main-header-area">
+            <div id="sticky-header" class="main-header-area hidden sm:block fixed top-0 left-0 w-full z-40 bg-gradient-to-b from-black/60 to-transparent backdrop-blur-sm sm:bg-black sm:backdrop-blur-0 sm:static sm:w-auto sm:z-auto">
                 <div class="container">
                     <div class="header_bottom_border">
                         <div class="row align-items-center">
@@ -90,9 +93,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
                         </div>
                     </div>
 
@@ -100,6 +100,20 @@
             </div>
         </div>
     </header>
+    <!-- Floating Hamburger Menu for Mobile -->
+    <div class="fixed top-4 right-4 z-50 block sm:hidden">
+        <button id="mobile-menu-button" class="flex items-center px-3 py-2 border-2 border-purple-500 rounded-full text-purple-300 bg-black bg-opacity-80 hover:bg-purple-900 focus:outline-none shadow-lg neon-glow" aria-label="Toggle navigation" style="box-shadow:0 0 8px #a21caf,0 0 16px #a21caf;">
+            <svg class="fill-current h-7 w-7" viewBox="0 0 20 20"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+        </button>
+        <div id="mobile-menu-dropdown" class="absolute right-0 top-14 w-72 max-w-xs bg-gradient-to-br from-black via-purple-900 to-black border-2 border-purple-500 rounded-xl z-50 flex flex-col items-center p-4 space-y-3 shadow-2xl neon-glow hidden" style="box-shadow:0 0 16px #a21caf,0 0 32px #a21caf;">
+            <a href="index.html" class="text-white text-lg font-semibold w-full text-center py-2 px-4 rounded hover:bg-purple-800 transition-all duration-200">Home</a>
+            <a href="#sponsors" class="text-white text-lg font-semibold w-full text-center py-2 px-4 rounded hover:bg-purple-800 transition-all duration-200">Sponsors</a>
+            <a href="#about" class="text-white text-lg font-semibold w-full text-center py-2 px-4 rounded hover:bg-purple-800 transition-all duration-200">About</a>
+            <a href="#location" class="text-white text-lg font-semibold w-full text-center py-2 px-4 rounded hover:bg-purple-800 transition-all duration-200">Location</a>
+            <a href="https://forms.office.com/e/2TUi6hD72i" class="w-full py-2 px-4 rounded font-bold text-lg text-center text-black bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 shadow-lg border-2 border-yellow-300 hover:from-pink-500 hover:to-yellow-400 transition-all duration-200 neon-cfp" style="box-shadow:0 0 12px #facc15,0 0 24px #f472b6,0 0 32px #a21caf; text-shadow:0 0 8px #fff200,0 0 16px #f472b6;">CFP</a>
+            <a href="https://www.facebook.com/events/1460082218687653" class="text-white text-lg font-semibold w-full text-center py-2 px-4 rounded hover:bg-green-700 transition-all duration-200">Register</a>
+        </div>
+    </div>
     <!-- header-end -->
 
     <!-- slider_area_start -->
@@ -744,6 +758,49 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <script src="js/main.js"></script>
+    <script>
+// Hamburger menu toggle for mobile
+const menuButton = document.getElementById('mobile-menu-button');
+const menuDropdown = document.getElementById('mobile-menu-dropdown');
+const menuIcon = menuButton.querySelector('svg');
+if (menuButton && menuDropdown) {
+    menuButton.addEventListener('click', () => {
+        menuDropdown.classList.toggle('hidden');
+        menuIcon.classList.toggle('animate-spin-slow');
+    });
+    // Close menu when a link is clicked
+    menuDropdown.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuDropdown.classList.add('hidden');
+            menuIcon.classList.remove('animate-spin-slow');
+        });
+    });
+}
+</script>
+<style>
+  .neon-glow {
+    box-shadow: 0 0 8px #a21caf, 0 0 16px #a21caf;
+  }
+  .neon-cfp {
+    animation: neonPulse 1.5s infinite alternate;
+  }
+  @keyframes neonPulse {
+    from {
+      box-shadow: 0 0 12px #facc15, 0 0 24px #f472b6, 0 0 32px #a21caf;
+      filter: brightness(1.2);
+    }
+    to {
+      box-shadow: 0 0 24px #fff200, 0 0 48px #f472b6, 0 0 64px #a21caf;
+      filter: brightness(1.5);
+    }
+  }
+  .animate-spin-slow {
+    animation: spin 0.7s linear;
+  }
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+</style>
 </body>
 
 </html>
