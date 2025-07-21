@@ -29,7 +29,18 @@
 
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-
+    <style>
+        @keyframes neon-flicker {
+          0%, 100% { opacity: 1; }
+          10%, 20% { opacity: 0.8; }
+          18%, 22% { opacity: 0.4; }
+          19%, 21% { opacity: 0.7; }
+          50% { opacity: 0.9; }
+        }
+        .neon-flicker {
+          animation: neon-flicker 2.5s infinite alternate;
+        }
+        </style>
 </head>
 
 <body>
@@ -121,15 +132,15 @@
             <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
             <!-- JAVA BEER Title-->
             <div class="absolute top-1/2 -translate-y-1/2 z-10 flex flex-col items-start sm:block hidden">
-                <span class="text-pink-400 font-extrabold text-6xl drop-shadow-[0_2px_16px_#ff00cc] wow fadeInRight" style="letter-spacing:0.05em; animation: text-flicker 3s linear infinite; color: #FF00E6;">JAVA BEER</span>
+                <span class="text-fuchsia-500 font-extrabold text-7xl drop-shadow-[0_2px_16px_#ff00cc] neon-flicker" style="letter-spacing:0.05em;">JAVA BEER</span>
             </div>
             <!-- Mobile: JAVA BEER top, Summit 2025 center, address bottom -->
             <div class="absolute inset-0 z-10 flex flex-col sm:hidden">
                 <div class="w-full flex justify-center pt-24 pb-2">
-                    <span class="text-pink-400 font-extrabold text-6xl drop-shadow-[0_2px_16px_#ff00cc] text-center" style="letter-spacing:0.05em;">JAVA BEER</span>
+                    <span class="text-fuchsia-500 font-extrabold text-6xl drop-shadow-[0_2px_16px_#ff00cc] text-center neon-flicker" style="letter-spacing:0.05em;">JAVA BEER</span>
                 </div>
                 <div class="flex-1 flex flex-col justify-center items-center">
-                    <span class="text-white text-5xl font-bold italic drop-shadow-[0_2px_16px_#fff] text-center mb-1" style="font-family: cursive, sans-serif;">Summit 2025</span>
+                    <span class="text-cyan-300 text-5xl font-bold italic drop-shadow-[0_2px_16px_#00fff7] text-center mb-1" style="font-family: cursive, sans-serif;">Summit 2025</span>
                 </div>
                 <div class="w-full flex flex-col items-center pb-3">
                     <span class="text-white text-lg font-extrabold drop-shadow-[0_2px_8px_#000] text-center mb-0">Maimunarnika, Sofia, Bulgaria</span>
@@ -138,7 +149,7 @@
             </div>
             <!-- Desktop: Summit 2025 and address at bottom -->
             <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center text-center sm:flex hidden">
-                <span class="text-white text-6xl font-bold italic drop-shadow-[0_2px_16px_#fff] mb-4 pb-10" style="font-family: cursive, sans-serif;">Summit 2025</span>
+                <span class="text-cyan-300 text-6xl font-bold italic drop-shadow-[0_2px_16px_#00fff7] mb-4 pb-10" style="font-family: cursive, sans-serif;">Summit 2025</span>
                 <span class="text-white text-2xl font-extrabold drop-shadow-[0_2px_8px_#000]">Maimunarnika, Sofia, Bulgaria</span>
                 <span class="text-white text-2xl font-extrabold drop-shadow-[0_2px_8px_#000]">26 August 2025</span>
             </div>
