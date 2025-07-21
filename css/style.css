@@ -6408,3 +6408,14 @@ a:hover {
     height: 60vw !important;
   }
 }
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  10%, 20% { opacity: 0.8; }
+  18%, 22% { opacity: 0.4; }
+  19%, 21% { opacity: 0.7; }
+  50% { opacity: 0.9; }
+}
+.neon-flicker {
+  animation: neon-flicker 2.5s infinite alternate;
+}
