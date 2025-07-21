@@ -32,6 +32,7 @@
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -117,24 +118,32 @@
     <!-- header-end -->
 
     <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="single_slider  d-flex align-items-center slider_bg_1">
-            <div class="container" style="display:flex;flex-direction:column; justify-content: flex-end; height: 40em">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center">
-<!--                           <div class="shape_1 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">-->
-<!--                               <img src="img/shape/shape_1.svg" alt="">-->
-<!--                           </div>-->
-<!--                           <div class="shape_2 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">-->
-<!--                               <img src="img/shape/shape_2.svg" alt="">-->
-<!--                           </div>-->
-<!--                                                     <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">27 Aug, 2024</span>-->
-<!--                           <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">Java Beer Summit</h3> -->
-<!--                           <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Maimunarnika, Sofia, Bulgaria <br/> <br/> 26 August, 2025</p>-->
-                        </div>
-                    </div>
+    <div class="slider_area relative">
+        <div class="relative w-full overflow-hidden flex items-end justify-center min-h-screen h-screen sm:min-h-screen sm:h-screen sm:max-h-none" style="background: linear-gradient(180deg, #1a0033 0%, #2d003e 100%);">
+            <img src="img/banner/banner-monkeys.jpg" alt="Java Beer Summit Banner" class="w-full h-full object-cover object-center absolute inset-0 z-0" style="opacity:0.85;">
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+            <!-- JAVA BEER Title-->
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 flex flex-col items-start sm:block hidden">
+                <span class="anton-font text-pink-400 font-extrabold text-6xl drop-shadow-[0_2px_16px_#ff00cc] wow fadeInRight" style="letter-spacing:0.05em; animation: text-flicker 3s linear infinite; color: #FF00E6;">JAVA BEER</span>
+            </div>
+            <!-- Mobile: JAVA BEER top, Summit 2025 center, address bottom -->
+            <div class="absolute inset-0 z-10 flex flex-col sm:hidden">
+                <div class="w-full flex justify-center pt-24 pb-2">
+                    <span class="anton-font text-pink-400 font-extrabold text-6xl drop-shadow-[0_2px_16px_#ff00cc] text-center" style="letter-spacing:0.05em;">JAVA BEER</span>
                 </div>
+                <div class="flex-1 flex flex-col justify-center items-center">
+                    <span class="text-white text-5xl font-bold italic drop-shadow-[0_2px_16px_#fff] text-center mb-1" style="font-family: cursive, sans-serif;">Summit 2025</span>
+                </div>
+                <div class="w-full flex flex-col items-center pb-3">
+                    <span class="text-white text-lg font-extrabold drop-shadow-[0_2px_8px_#000] text-center mb-0">Maimunarnika, Sofia, Bulgaria</span>
+                    <span class="text-white text-lg font-extrabold drop-shadow-[0_2px_8px_#000] text-center">26 August 2025</span>
+                </div>
+            </div>
+            <!-- Desktop: Summit 2025 and address at bottom -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center text-center sm:flex hidden">
+                <span class="text-white text-6xl font-bold italic drop-shadow-[0_2px_16px_#fff] mb-4 pb-10" style="font-family: cursive, sans-serif;">Summit 2025</span>
+                <span class="text-white text-2xl font-extrabold drop-shadow-[0_2px_8px_#000]">Maimunarnika, Sofia, Bulgaria</span>
+                <span class="text-white text-2xl font-extrabold drop-shadow-[0_2px_8px_#000]">26 August 2025</span>
             </div>
         </div>
     </div>
@@ -799,6 +808,21 @@ if (menuButton && menuDropdown) {
   }
   @keyframes spin {
     100% { transform: rotate(360deg); }
+  }
+  .neon-glow-text {
+    text-shadow: 0 0 8px #a21caf, 0 0 16px #a21caf, 0 0 32px #fff, 0 2px 8px #000;
+  }
+  .anton-font {
+    font-family: 'Anton', Arial, Helvetica, sans-serif !important;
+  }
+  @media (max-width: 767px) {
+    .slider_bg_1 {
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      min-height: 320px !important;
+      height: 60vw !important;
+    }
   }
 </style>
 </body>
