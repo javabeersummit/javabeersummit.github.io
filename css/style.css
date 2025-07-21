@@ -6373,3 +6373,38 @@ a:hover {
   color: magenta;
   text-decoration: underline !important;
 }
+
+.neon-glow {
+  box-shadow: 0 0 8px #a21caf, 0 0 16px #a21caf;
+}
+.neon-cfp {
+  animation: neonPulse 1.5s infinite alternate;
+}
+@keyframes neonPulse {
+  from {
+    box-shadow: 0 0 12px #facc15, 0 0 24px #f472b6, 0 0 32px #a21caf;
+    filter: brightness(1.2);
+  }
+  to {
+    box-shadow: 0 0 24px #fff200, 0 0 48px #f472b6, 0 0 64px #a21caf;
+    filter: brightness(1.5);
+  }
+}
+.animate-spin-slow {
+  animation: spin 0.7s linear;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+.neon-glow-text {
+  text-shadow: 0 0 8px #a21caf, 0 0 16px #a21caf, 0 0 32px #fff, 0 2px 8px #000;
+}
+@media (max-width: 767px) {
+  .slider_bg_1 {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 320px !important;
+    height: 60vw !important;
+  }
+}

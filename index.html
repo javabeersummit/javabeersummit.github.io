@@ -29,10 +29,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -124,12 +121,12 @@
             <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
             <!-- JAVA BEER Title-->
             <div class="absolute top-1/2 -translate-y-1/2 z-10 flex flex-col items-start sm:block hidden">
-                <span class="anton-font text-pink-400 font-extrabold text-6xl drop-shadow-[0_2px_16px_#ff00cc] wow fadeInRight" style="letter-spacing:0.05em; animation: text-flicker 3s linear infinite; color: #FF00E6;">JAVA BEER</span>
+                <span class="text-pink-400 font-extrabold text-6xl drop-shadow-[0_2px_16px_#ff00cc] wow fadeInRight" style="letter-spacing:0.05em; animation: text-flicker 3s linear infinite; color: #FF00E6;">JAVA BEER</span>
             </div>
             <!-- Mobile: JAVA BEER top, Summit 2025 center, address bottom -->
             <div class="absolute inset-0 z-10 flex flex-col sm:hidden">
                 <div class="w-full flex justify-center pt-24 pb-2">
-                    <span class="anton-font text-pink-400 font-extrabold text-6xl drop-shadow-[0_2px_16px_#ff00cc] text-center" style="letter-spacing:0.05em;">JAVA BEER</span>
+                    <span class="text-pink-400 font-extrabold text-6xl drop-shadow-[0_2px_16px_#ff00cc] text-center" style="letter-spacing:0.05em;">JAVA BEER</span>
                 </div>
                 <div class="flex-1 flex flex-col justify-center items-center">
                     <span class="text-white text-5xl font-bold italic drop-shadow-[0_2px_16px_#fff] text-center mb-1" style="font-family: cursive, sans-serif;">Summit 2025</span>
@@ -755,8 +752,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/tilt.jquery.js"></script>
     <script src="js/plugins.js"></script>
-
-
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="js/hamburger.js"></script>
 
     <!--contact js-->
     <script src="js/contact.js"></script>
@@ -767,64 +766,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <script src="js/main.js"></script>
-    <script>
-// Hamburger menu toggle for mobile
-const menuButton = document.getElementById('mobile-menu-button');
-const menuDropdown = document.getElementById('mobile-menu-dropdown');
-const menuIcon = menuButton.querySelector('svg');
-if (menuButton && menuDropdown) {
-    menuButton.addEventListener('click', () => {
-        menuDropdown.classList.toggle('hidden');
-        menuIcon.classList.toggle('animate-spin-slow');
-    });
-    // Close menu when a link is clicked
-    menuDropdown.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuDropdown.classList.add('hidden');
-            menuIcon.classList.remove('animate-spin-slow');
-        });
-    });
-}
-</script>
-<style>
-  .neon-glow {
-    box-shadow: 0 0 8px #a21caf, 0 0 16px #a21caf;
-  }
-  .neon-cfp {
-    animation: neonPulse 1.5s infinite alternate;
-  }
-  @keyframes neonPulse {
-    from {
-      box-shadow: 0 0 12px #facc15, 0 0 24px #f472b6, 0 0 32px #a21caf;
-      filter: brightness(1.2);
-    }
-    to {
-      box-shadow: 0 0 24px #fff200, 0 0 48px #f472b6, 0 0 64px #a21caf;
-      filter: brightness(1.5);
-    }
-  }
-  .animate-spin-slow {
-    animation: spin 0.7s linear;
-  }
-  @keyframes spin {
-    100% { transform: rotate(360deg); }
-  }
-  .neon-glow-text {
-    text-shadow: 0 0 8px #a21caf, 0 0 16px #a21caf, 0 0 32px #fff, 0 2px 8px #000;
-  }
-  .anton-font {
-    font-family: 'Anton', Arial, Helvetica, sans-serif !important;
-  }
-  @media (max-width: 767px) {
-    .slider_bg_1 {
-      background-size: cover !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      min-height: 320px !important;
-      height: 60vw !important;
-    }
-  }
-</style>
 </body>
 
 </html>
