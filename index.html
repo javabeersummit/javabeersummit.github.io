@@ -7,12 +7,12 @@
     <title>Java Beer Summit</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title"              content="Java Beer Summit" />
-    <meta property="og:description"        content="Free beers and networking" />
+    <meta property="og:title" content="Java Beer Summit" />
+    <meta property="og:description" content="Free beers and networking" />
     <meta property="og:image" content="img/banner/banner-monkeys.png" />
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-<!--    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">-->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -26,59 +26,56 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/slicknav.css">
-
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
 <body>
     <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
 
     <!-- header-start -->
     <header>
-        <div class="header-area ">
+        <div class="header-area">
             <div id="sticky-header" class="main-header-area hidden sm:block fixed top-0 left-0 w-full z-40 bg-gradient-to-b from-black/60 to-transparent backdrop-blur-sm sm:bg-black sm:backdrop-blur-0 sm:static sm:w-auto sm:z-auto">
                 <div class="container">
                     <div class="header_bottom_border">
                         <div class="row align-items-center">
                             <div class="col-xl-3 col-lg-3">
                                 <div class="logo">
-<!--                                    <a href="index.html">-->
-<!--                                        <img src="img/logo.png" alt="">-->
-<!--                                    </a>-->
+                                    <!-- <a href="index.html">
+                                        <img src="img/logo.png" alt="">
+                                    </a> -->
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6">
-                                <div class="main-menu  d-none d-lg-block">
+                                <div class="main-menu d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
                                             <li><a href="index.html">home</a></li>
                                             <li><a href="#sponsors">Sponsors</a></li>
                                             <li><a href="#about">About</a></li>
                                             <li><a href="#location">Location</a></li>
-<!--                                            <li><a href="performer.html">Performer</a></li>-->
-<!--                                            -->
-<!--                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>-->
-<!--                                                <ul class="submenu">-->
-<!--                                                    <li><a href="about.html">about</a></li>-->
-<!--                                                    <li><a href="Program.html">Program</a></li>-->
-<!--                                                    <li><a href="Venue.html">Venue</a></li>-->
-<!--                                                    <li><a href="elements.html">elements</a></li>-->
-<!--                                                </ul>-->
-<!--                                            </li>-->
-<!--                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>-->
-<!--                                                <ul class="submenu">-->
-<!--                                                    <li><a href="blog.html">blog</a></li>-->
-<!--                                                    <li><a href="single-blog.html">single-blog</a></li>-->
-<!--                                                </ul>-->
-<!--                                            </li>-->
+                                            <!-- <li><a href="performer.html">Performer</a></li> -->
+                                            <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="about.html">about</a></li>
+                                                    <li><a href="Program.html">Program</a></li>
+                                                    <li><a href="Venue.html">Venue</a></li>
+                                                    <li><a href="elements.html">elements</a></li>
+                                                </ul>
+                                            </li> -->
+                                            <!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">blog</a></li>
+                                                    <li><a href="single-blog.html">single-blog</a></li>
+                                                </ul>
+                                            </li> -->
                                             <!-- CFP Closed -->
                                             <!-- <li><a href="#agenda">Agenda</a></li> -->
                                             <!-- CFP Open -->
                                             <li><a href="https://forms.office.com/e/2TUi6hD72i">CFP</a></li>
-
                                         </ul>
                                     </nav>
                                 </div>
@@ -94,15 +91,19 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </header>
+    <!-- header-end -->
+
     <!-- Floating Hamburger Menu for Mobile -->
     <div class="fixed top-4 right-4 z-50 block sm:hidden">
         <button id="mobile-menu-button" class="flex items-center px-3 py-2 border-2 border-purple-500 rounded-full text-purple-300 bg-black bg-opacity-80 hover:bg-purple-900 focus:outline-none shadow-lg neon-glow" aria-label="Toggle navigation" style="box-shadow:0 0 8px #a21caf,0 0 16px #a21caf;">
-            <svg class="fill-current h-7 w-7" viewBox="0 0 20 20"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+            <svg class="fill-current h-7 w-7" viewBox="0 0 20 20">
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
         </button>
         <div id="mobile-menu-dropdown" class="absolute right-0 top-14 w-72 max-w-xs bg-gradient-to-br from-black via-purple-900 to-black border-2 border-purple-500 rounded-xl z-50 flex flex-col items-center p-4 space-y-3 shadow-2xl neon-glow hidden" style="box-shadow:0 0 16px #a21caf,0 0 32px #a21caf;">
             <a href="index.html" class="text-white text-lg font-semibold w-full text-center py-2 px-4 rounded hover:bg-purple-800 transition-all duration-200">Home</a>
@@ -113,17 +114,18 @@
             <a href="https://www.facebook.com/events/1460082218687653" class="text-white text-lg font-semibold w-full text-center py-2 px-4 rounded hover:bg-green-700 transition-all duration-200">Register</a>
         </div>
     </div>
-    <!-- header-end -->
 
     <!-- slider_area_start -->
     <div class="slider_area relative">
         <div class="relative w-full overflow-hidden flex items-end justify-center min-h-screen h-screen sm:min-h-screen sm:h-screen sm:max-h-none" style="background: linear-gradient(180deg, #1a0033 0%, #2d003e 100%);">
             <img src="img/banner/banner-monkeys.jpg" alt="Java Beer Summit Banner" class="w-full h-full object-cover object-center absolute inset-0 z-0" style="opacity:0.85;">
             <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
-            <!-- JAVA BEER Title-->
+            
+            <!-- JAVA BEER Title -->
             <div class="absolute top-1/2 -translate-y-1/2 z-10 flex flex-col items-start sm:block hidden">
                 <span class="text-fuchsia-500 font-extrabold text-9xl drop-shadow-[0_2px_16px_#ff00cc] neon-flicker" style="letter-spacing:0.05em;font-family: Anton, sans-serif;">JAVA BEER</span>
             </div>
+            
             <!-- Mobile: JAVA BEER top, Summit 2025 center, address bottom -->
             <div class="absolute inset-0 z-10 flex flex-col sm:hidden">
                 <div class="w-full flex justify-center pt-24 pb-2">
@@ -137,6 +139,7 @@
                     <span class="text-white text-lg font-extrabold drop-shadow-[0_2px_8px_#000] text-center">26 August 2025</span>
                 </div>
             </div>
+            
             <!-- Desktop: Summit 2025 and address at bottom -->
             <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center text-center sm:flex hidden">
                 <span class="text-cyan-300 text-6xl font-bold italic drop-shadow-[0_2px_16px_#00fff7] mb-4 pb-10" style="font-family: Anton, sans-serif;">Summit 2025</span>
@@ -152,234 +155,239 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-            <div class="section_title text-center mb-20">
-                <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">The organizers !</h3>
+                    <div class="section_title text-center mb-20">
+                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">The organizers !</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <!-- Organizer 1 - Neon Blue -->
+                            <div class="single_performer wow fadeInUp">
+                                <a href="https://jug.bg" 
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-blue neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 w-full mb-4 flex items-center justify-center">
+                                        <img src="img/performer/bgjugwhite.png" 
+                                             alt="Bulgarian Java User Group" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">Bulgarian Java User Group</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <!-- Organizer 2 - Neon Pink -->
+                            <div class="single_performer wow fadeInUp">
+                                <a href="https://codexio.bg/" 
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-pink neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 w-full mb-4 flex items-center justify-center">
+                                        <img src="img/performer/codexio.svg" 
+                                             alt="Codexio" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">Codexio</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                <!-- Organizer 1 - Neon Blue -->
-                <div class="single_performer wow fadeInUp">
-                <a href="https://jug.bg" 
-                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-blue neon-border hover-intense transition-all duration-300"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    <div class="relative h-64 w-full mb-4 flex items-center justify-center">
-                        <img src="img/performer/bgjugwhite.png" 
-                             alt="Bulgarian Java User Group" 
-                             class="max-h-full max-w-full object-contain rounded">
-                    </div>
-                    <h3 class="text-3xl font-bold text-white">Bulgarian Java User Group</h3>
-                </a>
-                </div>
-                </div>
 
-                <!-- Organizer 2 - Neon Pink -->
-                <div class="col-lg-6 col-md-6">
-                <div  class="single_performer wow fadeInUp">
-                <a href="https://codexio.bg/" 
-                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-pink neon-border hover-intense transition-all duration-300"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   <div class="relative h-64 w-full mb-4 flex items-center justify-center">
-                    <img src="img/performer/codexio.svg" 
-                         alt="Codexio" 
-                         class="max-h-full max-w-full object-contain rounded">
-                    </div>
-                    <h3 class="text-3xl font-bold text-white">Codexio</h3>
-                </a>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-        <!-- Sponsors section -->
-        <div class="performar_area bg-black bg-grid w-full py-12 md:py-24 lg:py-32" id="sponsors">
+    <!-- Sponsors section -->
+    <div class="performar_area bg-black bg-grid w-full py-12 md:py-24 lg:py-32" id="sponsors">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-            <div class="section_title text-center mb-20">
-                <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">The sponsors !</h3>
-                <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" >Become a sponsor TODAY:</p>
+                    <div class="section_title text-center mb-20">
+                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">The sponsors !</h3>
+                        <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Become a sponsor TODAY:</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                <!-- Sponsor 1 - Neon Blue -->
-                <div class="single_performer wow fadeInUp">
-                <a href="https://epam.com" 
-                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-blue neon-border hover-intense transition-all duration-300"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   <div class="relative h-64 mb-4 w-full flex items-center justify-center">
-                    <img src="https://cdn.brandfetch.io/idJKRtwCx8/w/800/h/294/theme/light/logo.png?c=1bxid64Mup7aczewSAYMX&t=1668081231086" 
-                         alt="Epam" 
-                         class="max-h-full max-w-full object-contain rounded">
-                </div>
-                <h3 class="text-3xl font-bold text-white">Epam</h3>
-                </a>
-                </div>
-                </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <!-- Sponsor 1 - Neon Blue -->
+                            <div class="single_performer wow fadeInUp">
+                                <a href="https://epam.com" 
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-blue neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 mb-4 w-full flex items-center justify-center">
+                                        <img src="https://cdn.brandfetch.io/idJKRtwCx8/w/800/h/294/theme/light/logo.png?c=1bxid64Mup7aczewSAYMX&t=1668081231086" 
+                                             alt="Epam" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">Epam</h3>
+                                </a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-6 col-md-6">
-                <!-- Sponsor 2 - Neon Pink -->
-                <div class="single_performer wow fadeInUp">
-                <a href="https://www.trading212.com/" 
-                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-pink neon-border hover-intense transition-all duration-300"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   <div class="relative h-64 w-full mb-4 flex items-center justify-center">
-                    <img src="https://cdn.brandfetch.io/idljYeMpMH/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1696102242911" 
-                         alt="Trading 212" 
-                         class="max-h-full max-w-full object-contain rounded">
-                </div>
-                <h3 class="text-3xl font-bold text-white">Trading 212</h3>
-                </a>
-                </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                <!-- Sponsor 3 - Neon Green -->
-                <div class="single_performer wow fadeInUp">
-                <a href="https://www.endava.com/" 
-                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-green neon-border hover-intense transition-all duration-300"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   <div class="relative h-64 w-full mb-4 flex items-center justify-center">
-                    <img src="https://cdn.brandfetch.io/id4YZ7PWEj/idZDwvxaqv.svg?c=1bxid64Mup7aczewSAYMX&t=1658436048599" 
-                         alt="Endava" 
-                         class="max-h-full max-w-full object-contain rounded">
-                </div>
-                <h3 class="text-3xl font-bold text-white">Endava</h3>
-                </a>
-                </div>
-                </div>
+                        <div class="col-lg-6 col-md-6">
+                            <!-- Sponsor 2 - Neon Pink -->
+                            <div class="single_performer wow fadeInUp">
+                                <a href="https://www.trading212.com/" 
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-pink neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 w-full mb-4 flex items-center justify-center">
+                                        <img src="https://cdn.brandfetch.io/idljYeMpMH/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1696102242911" 
+                                             alt="Trading 212" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">Trading 212</h3>
+                                </a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-6 col-md-6">
-                <!-- Sponsor 4 - Neon Purple -->
-                <div class="single_performer wow fadeInUp">
-                <a href="https://www.limechain.tech" 
-                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-purple neon-border hover-intense transition-all duration-300"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   <div class="relative h-64 w-full mb-4 flex items-center justify-center">
-                    <img src="https://cdn.brandfetch.io/idjxnA5TRB/w/820/h/243/theme/light/logo.png?c=1bxid64Mup7aczewSAYMX&t=1746277814647" 
-                         alt="Limechain" 
-                         class="max-h-full max-w-full object-contain rounded">
-                </div>
-                <h3 class="text-3xl font-bold text-white">Limechain</h3>
-                </a>
-                </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                <!-- Sponsor 5 - Neon Orange -->
-                <div class="single_performer wow fadeInUp">
-                <a href="https://www.sap.com/bulgaria/" 
-                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-orange neon-border hover-intense transition-all duration-300"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   <div class="relative h-64 w-full mb-4 flex items-center justify-center">
-                    <img src="https://cdn.brandfetch.io/idQXbkxScC/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675843845700" 
-                         alt="SAP" 
-                         class="max-h-full max-w-full object-contain rounded">
-                </div>
-                <h3 class="text-3xl font-bold text-white">SAP</h3>
-                </a>
-                </div>
-                </div>
+                        <div class="col-lg-6 col-md-6">
+                            <!-- Sponsor 3 - Neon Green -->
+                            <div class="single_performer wow fadeInUp">
+                                <a href="https://www.endava.com/" 
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-green neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 w-full mb-4 flex items-center justify-center">
+                                        <img src="https://cdn.brandfetch.io/id4YZ7PWEj/idZDwvxaqv.svg?c=1bxid64Mup7aczewSAYMX&t=1658436048599" 
+                                             alt="Endava" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">Endava</h3>
+                                </a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-6 col-md-6">
-                <!-- Sponsor 6 - Neon Blue -->
-                <div class="single_performer wow fadeInUp">
-                <a href="https://tide.co" 
-                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-blue neon-border hover-intense transition-all duration-300"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   <div class="relative h-64 mb-4 w-full flex items-center justify-center">
-                    <img src="https://cdn.brandfetch.io/id152Gqj5-/w/800/h/330/theme/light/logo.png?c=1bxid64Mup7aczewSAYMX&t=1668073504450" 
-                         alt="Tide" 
-                         class="max-h-full max-w-full object-contain rounded">
-                </div>
-                <h3 class="text-3xl font-bold text-white">Tide</h3>
-                </a>
-                </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                <!-- with booth - Neon Yellow -->
-                <div class="single_performer wow fadeInUp">
-                <a href="mailto:java.beer@codexio.bg?subject=sponsor with booth for javabeer summit" 
-                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-yellow neon-border hover-intense transition-all duration-300"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   <div class="relative h-64 w-full mb-4 flex items-center justify-center">
-                    <img src="img/performer/boothiful.png" 
-                         alt="With Booth" 
-                         class="max-h-full max-w-full object-contain rounded">
-                </div>
-                <h3 class="text-3xl font-bold text-white">With Booth</h3>
-                <p class="text-2xl mt-1 hover:neon-text transition-all">1500 BGN</p>
-                </a>
-                </div>
-                </div>
+                        <div class="col-lg-6 col-md-6">
+                            <!-- Sponsor 4 - Neon Purple -->
+                            <div class="single_performer wow fadeInUp">
+                                <a href="https://www.limechain.tech" 
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-purple neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 w-full mb-4 flex items-center justify-center">
+                                        <img src="https://cdn.brandfetch.io/idjxnA5TRB/w/820/h/243/theme/light/logo.png?c=1bxid64Mup7aczewSAYMX&t=1746277814647" 
+                                             alt="Limechain" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">Limechain</h3>
+                                </a>
+                            </div>
+                        </div>
 
-                <div class="col-lg-6 col-md-6">
-                    <!-- without booth- Neon Pink -->
-                <div class="single_performer wow fadeInUp">
+                        <div class="col-lg-6 col-md-6">
+                            <!-- Sponsor 5 - Neon Orange -->
+                            <div class="single_performer wow fadeInUp">
+                                <a href="https://www.sap.com/bulgaria/" 
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-orange neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 w-full mb-4 flex items-center justify-center">
+                                        <img src="https://cdn.brandfetch.io/idQXbkxScC/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675843845700" 
+                                             alt="SAP" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">SAP</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <!-- Sponsor 6 - Neon Blue -->
+                            <div class="single_performer wow fadeInUp">
+                                <a href="https://tide.co" 
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-blue neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 mb-4 w-full flex items-center justify-center">
+                                        <img src="https://cdn.brandfetch.io/id152Gqj5-/w/800/h/330/theme/light/logo.png?c=1bxid64Mup7aczewSAYMX&t=1668073504450" 
+                                             alt="Tide" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">Tide</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <!-- with booth - Neon Yellow -->
+                            <div class="single_performer wow fadeInUp">
+                                <a href="mailto:java.beer@codexio.bg?subject=sponsor with booth for javabeer summit" 
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-yellow neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 w-full mb-4 flex items-center justify-center">
+                                        <img src="img/performer/boothiful.png" 
+                                             alt="With Booth" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">With Booth</h3>
+                                    <p class="text-2xl mt-1 hover:neon-text transition-all">1500 BGN</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <!-- without booth- Neon Pink -->
+                            <div class="single_performer wow fadeInUp">
                                 <a href="mailto:java.beer@codexio.bg?subject=sponsor WITHOUT booth for javabeer summit" 
-                                class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-pink neon-border hover-intense transition-all duration-300"
-                                target="_blank" 
-                                rel="noopener noreferrer">
-                                <div class="relative h-64 w-full mb-4 flex items-center justify-center">
-                                 <img src="img/performer/boothless.png" 
-                                      alt="Without Booth" 
-                                      class="max-h-full max-w-full object-contain rounded">
-                             </div>
-                             <h3 class="text-3xl font-bold text-white">Without Booth</h3>
-                             <p class="text-2xl mt-1 hover:neon-text transition-all">750 BGN</p>
-                             </a>
-                </div>
+                                   class="flex flex-col items-center p-6 rounded-lg bg-black text-neon-pink neon-border hover-intense transition-all duration-300"
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    <div class="relative h-64 w-full mb-4 flex items-center justify-center">
+                                        <img src="img/performer/boothless.png" 
+                                             alt="Without Booth" 
+                                             class="max-h-full max-w-full object-contain rounded">
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white">Without Booth</h3>
+                                    <p class="text-2xl mt-1 hover:neon-text transition-all">750 BGN</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-    <!-- sponsors_end  -->
+    <!-- sponsors_end -->
 
-    <!-- about_area_start  -->
+    <!-- about_area_start -->
     <div class="about_area black_bg" id="about">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section_title text-center mb-80">
                         <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Java Beer Summit</h3>
-                        <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" >The event is organized by the Bulgarian Java User Group, Codexio and random beer fans from Bulgaria.</p>
-                        <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" >There will be an agenda prior to the event, but everyone can go to the scene and talk if desired !</p>
-                        <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" >We strongly recommend stand up-like talks and not technical talks in order to keep the attendees attention ;)</p>
+                        <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">The event is organized by the Bulgarian Java User Group, Codexio and random beer fans from Bulgaria.</p>
+                        <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">There will be an agenda prior to the event, but everyone can go to the scene and talk if desired !</p>
+                        <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">We strongly recommend stand up-like talks and not technical talks in order to keep the attendees attention ;)</p>
                     </div>
                 </div>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-7 col-md-6 about_thumb-wrapper">
                     <div class="about_thumb">
-<!--                        <div class="shap_3  wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">-->
-<!--                            <img src="img/shape/shape_3.svg" alt="">-->
-<!--                        </div>-->
-                        <div class="thumb_inner  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <!-- <div class="shap_3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+                            <img src="img/shape/shape_3.svg" alt="">
+                        </div> -->
+                        <div class="thumb_inner wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <img src="img/about/about.webp" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6">
                     <div class="about_info pl-68">
-                        <h4 class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Register and spred the word!</h4>
-                        <p class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">Join in for a fun evening
+                        <h4 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Register and spred the word!</h4>
+                        <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">Join in for a fun evening
                             of beer and informal Java talks at the Maimunarnika, Sofia.
                             Don't drink beer? No problem, we will provide wine as well ;) and even french fries or belgian fries 🤔.
                             The entrance is free and the registration is optional.
@@ -395,13 +403,13 @@
             </div>
         </div>
     </div>
-    <!-- about_area_end  -->
+    <!-- about_area_end -->
 
     <div class="program_details_area detials_bg_1 overlay2">
         <div class="container" id="agenda">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section_title text-center mb-80  wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="section_title text-center mb-80 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                         <h3>Agenda</h3>
                     </div>
                 </div>
@@ -413,13 +421,13 @@
                             <div class="inner_wrap">
                                 <div class="circle_img"></div>
                                 <div class="porgram_top">
-                                    <span class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">19:30-20:00</span>
-                                    <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">26 Aug 2025</h4>
+                                    <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">19:30-20:00</span>
+                                    <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">26 Aug 2025</h4>
                                 </div>
                                 <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Opening</h4>
                                 <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                                     Welcome talk by Bulgarian Java User Group, Codexio and friends*.
-<!--                                    <img src="img/program_details/3.png" alt="">-->
+                                    <!-- <img src="img/program_details/3.png" alt=""> -->
                                 </div>
                             </div>
                         </div>
@@ -433,7 +441,7 @@
                                 <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">Lightning talks</h4>
                                 <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
                                     Short, fast, talks, 15-20 minutes each, on any topic you like.
-<!--                                    <img src="img/program_details/3.png" alt="">-->
+                                    <!-- <img src="img/program_details/3.png" alt=""> -->
                                 </div>
                             </div>
                         </div>
@@ -441,11 +449,11 @@
                             <div class="inner_wrap">
                                 <div class="circle_img"></div>
                                 <div class="porgram_top">
-                                    <span class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">20:00-22:00</span>
-                                    <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">26 Aug 2024</h4>
+                                    <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">20:00-22:00</span>
+                                    <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">26 Aug 2024</h4>
                                 </div>
-                                <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Welcome and cheers!</h4>
-                                <div class="thumb  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                                <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Welcome and cheers!</h4>
+                                <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                                     Yes, at the same time every sponsor can also come to the stage and say welcome or cheers
                                 </div>
                             </div>
@@ -469,10 +477,12 @@
         </div>
     </div>
 
-    <!-- map_area_start  -->
+    <!-- map_area_start -->
     <div class="map_area" id="location">
         <div id="map" style="height: 600px; position: relative; overflow: hidden;">
-            <a href="https://www.google.com/maps/place/%D0%9C%D0%B0%D0%B9%D0%BC%D1%83%D0%BD%D0%B0%D1%80%D0%BD%D0%B8%D0%BA%D0%B0/@42.6833169,23.3406278,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85a34779b017:0x18502968816b6d98!8m2!3d42.683313!4d23.3428218" target="_blank"><img src="img/staticmap.jpg"/></a>
+            <a href="https://www.google.com/maps/place/%D0%9C%D0%B0%D0%B9%D0%BC%D1%83%D0%BD%D0%B0%D1%80%D0%BD%D0%B8%D0%BA%D0%B0/@42.6833169,23.3406278,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85a34779b017:0x18502968816b6d98!8m2!3d42.683313!4d23.3428218" target="_blank">
+                <img src="img/staticmap.jpg" alt="Map Location"/>
+            </a>
         </div>
         <script>
             function initMap() {
@@ -532,51 +542,52 @@
             </div>
         </div>
     </div>
-    <!-- map_area_end  -->
+    <!-- map_area_end -->
 
-    <!-- brand_area_start  -->
-<!--    <div class="brand_area black_bg">-->
-<!--        <div class="container">-->
-<!--            <div class="row">-->
-<!--                <div class="col-lg-12">-->
-<!--                    <div class="section_title text-center mb-80">-->
-<!--                        <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Sponsor Logos</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="col-lg-12">-->
-<!--                    <div class="brand_wrap">-->
-<!--                        <div class="brand_active owl-carousel">-->
-<!--                            <div class="single_brand text-center">-->
-<!--                                <img src="img/brand/1.png" alt="">-->
-<!--                            </div>-->
-<!--                            <div class="single_brand text-center">-->
-<!--                                <img src="img/brand/2.png" alt="">-->
-<!--                            </div>-->
-<!--                            <div class="single_brand text-center">-->
-<!--                                <img src="img/brand/3.png" alt="">-->
-<!--                            </div>-->
-<!--                            <div class="single_brand text-center">-->
-<!--                                <img src="img/brand/4.png" alt="">-->
-<!--                            </div>-->
-<!--                            <div class="single_brand text-center">-->
-<!--                                <img src="img/brand/5.png" alt="">-->
-<!--                            </div>-->
-<!--                            <div class="single_brand text-center">-->
-<!--                                <img src="img/brand/1.png" alt="">-->
-<!--                            </div>-->
-<!--                            <div class="single_brand text-center">-->
-<!--                                <img src="img/brand/2.png" alt="">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-    <!-- brand_area_end  -->
-    <!-- footer_start  -->
+    <!-- brand_area_start -->
+    <!-- <div class="brand_area black_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title text-center mb-80">
+                        <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Sponsor Logos</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="brand_wrap">
+                        <div class="brand_active owl-carousel">
+                            <div class="single_brand text-center">
+                                <img src="img/brand/1.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/brand/2.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/brand/3.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/brand/4.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/brand/5.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/brand/1.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/brand/2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- brand_area_end -->
+
+    <!-- footer_start -->
     <footer class="footer">
         <div class="footer_top">
             <div class="container">
@@ -600,15 +611,15 @@
                     <div class="col-xl-12">
                         <p class="copy_right text-center wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- footer_end  -->
+    <!-- footer_end -->
 
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -641,7 +652,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
-
 
     <script src="js/main.js"></script>
 </body>
