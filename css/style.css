@@ -6416,9 +6416,6 @@ a:hover {
 /*   text-decoration: underline !important; */
 }
 
-.neon-glow {
-  box-shadow: 0 0 8px #a21caf, 0 0 16px #a21caf;
-}
 .neon-cfp {
   animation: neonPulse 1.5s infinite alternate;
 }
@@ -6480,7 +6477,7 @@ a:hover {
  /*  box-shadow: inset 0 0 10px #EC4899, 0 0 20px #EC4899 inset, 0 0 20px #EC4899 inset; */
 }
 
-/* Neon outline effect for organizer logos */
+/* Neon outline effect for organizer/sponsors logos */
 img.neon-outline {
   background: transparent !important;
   filter: drop-shadow(0 0 6px #fff)
@@ -6491,4 +6488,83 @@ img.neon-outline {
                   drop-shadow(0 0 12px #fff)
                   drop-shadow(0 0 24px #fff)
                   drop-shadow(0 0 48px #fff);
+}
+
+.neon-text {
+  text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+}
+
+.neon-border {
+  border: 2px solid currentColor;
+  box-shadow: 
+      inset 0 0 10px currentColor,
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 30px currentColor;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from {
+      box-shadow: 
+          inset 0 0 10px currentColor,
+          0 0 10px currentColor,
+          0 0 20px currentColor,
+          0 0 30px currentColor;
+  }
+  to {
+      box-shadow: 
+          inset 0 0 15px currentColor,
+          0 0 15px currentColor,
+          0 0 30px currentColor,
+          0 0 45px currentColor;
+  }
+}
+
+.hover-intense:hover {
+  box-shadow: 
+      inset 0 0 20px currentColor,
+      0 0 20px currentColor,
+      0 0 40px currentColor,
+      0 0 60px currentColor !important;
+  transform: scale(1.05);
+}
+
+.bg-grid {
+  background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Neon color classes for sponsors */
+.text-neon-blue {
+  color: #00ffff !important;
+}
+
+.text-neon-pink {
+  color: #ff00ff !important;
+}
+
+.text-neon-green {
+  color: #00ff00 !important;
+}
+
+.text-neon-purple {
+  color: #8000ff !important;
+}
+
+.text-neon-orange {
+  color: #ff8000 !important;
+}
+
+.text-neon-yellow {
+  color: #ffff00 !important;
 }
