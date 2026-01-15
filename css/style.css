@@ -76,7 +76,7 @@ a:hover,
 /* line 47, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
 a,
 button {
-  color: #ff00ff;
+  color: #00f0ff;
   font-weight: bold;
   outline: medium none;
 }
@@ -2564,8 +2564,8 @@ h3 {
 
 /* line 103, ../../Arafath/CL/December/236. Event-02/HTML/scss/_program_details.scss */
 .program_details_area .program_detail_wrap .single_propram .thumb {
-  margin-bottom: 23px;
-  color: magenta;
+    margin-bottom: 23px;
+    color: #ffbe0b;
 }
 
 /* line 105, ../../Arafath/CL/December/236. Event-02/HTML/scss/_program_details.scss */
@@ -6335,11 +6335,11 @@ a:hover {
 }
 @keyframes neonPulse {
   from {
-    box-shadow: 0 0 12px #facc15, 0 0 24px #f472b6, 0 0 32px #a21caf;
+    box-shadow: 0 0 12px #ffbe0b, 0 0 24px #00f0ff, 0 0 32px #00f0ff;
     filter: brightness(1.2);
   }
   to {
-    box-shadow: 0 0 24px #fff200, 0 0 48px #f472b6, 0 0 64px #a21caf;
+    box-shadow: 0 0 24px #ffbe0b, 0 0 48px #00f0ff, 0 0 64px #00f0ff;
     filter: brightness(1.5);
   }
 }
@@ -6992,9 +6992,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Override specific old purple color references */
 .program_details_area .program_detail_wrap .single_propram .porgram_top span {
-  color: #ff00ff !important;
-  font-weight: 700 !important;
-  filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.6)) !important;
+    color: #ffbe0b !important;
+    font-weight: 700 !important;
 }
 
 /* Brighten all border colors */
@@ -7075,3 +7074,675 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 10px rgba(255, 0, 255, 0.6) !important;
   width: 3px !important;
 }
+
+/* Animated Grid Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(111, 195, 223, 0.05) 25%, rgba(111, 195, 223, 0.05) 26%, transparent 27%, transparent 74%, rgba(111, 195, 223, 0.05) 75%, rgba(111, 195, 223, 0.05) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(111, 195, 223, 0.05) 25%, rgba(111, 195, 223, 0.05) 26%, transparent 27%, transparent 74%, rgba(111, 195, 223, 0.05) 75%, rgba(111, 195, 223, 0.05) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes gridMove {
+    0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+    100% { transform: perspective(500px) rotateX(60deg) translateY(50px); }
+}
+
+/* Scan Line */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6fc3df, transparent);
+    animation: scan 4s linear infinite;
+    z-index: 9999;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+@keyframes scan {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+/* ==========================================
+   CALM CYAN & GOLD THEME - Modern & Professional
+   Overrides the neon rainbow theme
+   ========================================== */
+
+/* Import Orbitron font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+/* Reset body and background to calm aesthetic */
+body {
+    background: #000 !important;
+    color: #00f0ff !important;
+    font-family: 'Orbitron', sans-serif !important;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Keep the existing animated grid background - just update colors to cyan */
+body::before {
+    background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(0, 240, 255, 0.03) 25%, rgba(0, 240, 255, 0.03) 26%, transparent 27%, transparent 74%, rgba(0, 240, 255, 0.03) 75%, rgba(0, 240, 255, 0.03) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(0, 240, 255, 0.03) 25%, rgba(0, 240, 255, 0.03) 26%, transparent 27%, transparent 74%, rgba(0, 240, 255, 0.03) 75%, rgba(0, 240, 255, 0.03) 76%, transparent 77%, transparent) !important;
+}
+
+/* Update scan line color to cyan */
+body::after {
+    background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.4), transparent) !important;
+    opacity: 0.3 !important;
+}
+
+/* Remove aggressive animations - Replace with calm ones */
+h3 {
+    animation: none !important;
+    color: #ffbe0b !important;
+    filter: drop-shadow(0 0 20px rgba(255, 190, 11, 0.5)) !important;
+}
+
+.neon-flicker {
+    animation: none !important;
+}
+
+@keyframes text-flicker {
+    0%, 100% { opacity: 1; }
+}
+
+@keyframes border-flicker {
+    0%, 100% { opacity: 1; }
+}
+
+/* Update all cyan colors */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 8px !important;
+}
+
+h2 {
+    font-size: 3em !important;
+    background: linear-gradient(90deg, #ffbe0b 0%, #ff6b00 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: drop-shadow(0 0 10px rgba(255, 190, 11, 0.3)) !important;
+    position: relative !important;
+    padding-left: 30px !important;
+}
+
+h2::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 6px !important;
+    height: 80% !important;
+    background: linear-gradient(180deg, #ffbe0b, #ff6b00) !important;
+    box-shadow: 0 0 15px #ffbe0b !important;
+}
+
+h3 {
+    color: #ffbe0b !important;
+    font-size: 1.6em !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    filter: drop-shadow(0 0 8px rgba(255, 190, 11, 0.2)) !important;
+}
+
+h4 {
+    color: #00f0ff !important;
+    filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.3)) !important;
+}
+
+/* Paragraph text - calm cyan */
+p {
+    color: rgba(0, 240, 255, 0.9) !important;
+    line-height: 1.9 !important;
+    font-size: 1.05em !important;
+    font-weight: 400 !important;
+    filter: none !important;
+}
+
+/* Links - cyan with subtle glow */
+a {
+    color: #00f0ff !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    transition: all 0.3s !important;
+}
+
+a:hover {
+    color: #ffbe0b !important;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.3) !important;
+    filter: none !important;
+}
+
+/* Section backgrounds */
+.section_title h3,
+.neon-card h2,
+.neon-box h3 {
+    background: linear-gradient(90deg, #ffbe0b 0%, #ff6b00 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: drop-shadow(0 0 8px rgba(255, 190, 11, 0.2)) !important;
+}
+
+/* Cards and sections */
+.neon-card,
+.single_performer a,
+.neon-box {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 30, 60, 0.8) 100%) !important;
+    border: 1px solid rgba(0, 240, 255, 0.3) !important;
+    border-image: none !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px) !important;
+}
+
+.neon-card::before,
+.single_performer a::before {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(255, 190, 11, 0.1)) !important;
+    opacity: 0 !important;
+    transition: opacity 0.4s !important;
+}
+
+.neon-card::after,
+.single_performer a::after {
+    border-top: 2px solid #ffbe0b !important;
+    border-right: 2px solid #ffbe0b !important;
+    background: none !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.neon-card:hover,
+.single_performer a:hover,
+.neon-box:hover {
+    transform: translateY(-15px) !important;
+    border-color: rgba(0, 240, 255, 0.8) !important;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2), 0 0 20px rgba(0, 240, 255, 0.1) !important;
+}
+
+.neon-card:hover::before,
+.single_performer a:hover::before {
+    opacity: 1 !important;
+}
+
+/* Buttons - Cyan and Gold */
+.register-btn,
+.neon-button,
+.boxed-btn,
+.boxed-btn3,
+.boxed-btn3-white,
+.boxed-btn3-line,
+.boxed-btn2 {
+    background: transparent !important;
+    border: 2px solid #00f0ff !important;
+    color: #00f0ff !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.4s !important;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px) !important;
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.2) !important;
+}
+
+.register-btn::before,
+.neon-button::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.3), transparent) !important;
+    transition: left 0.6s !important;
+}
+
+.register-btn:hover,
+.neon-button:hover,
+.boxed-btn:hover,
+.boxed-btn3:hover,
+.boxed-btn3-white:hover,
+.boxed-btn3-line:hover,
+.boxed-btn2:hover {
+    color: #000 !important;
+    background: #00f0ff !important;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 10px rgba(0, 240, 255, 0.3) !important;
+    transform: translateY(-3px) !important;
+}
+
+.register-btn:hover::before,
+.neon-button:hover::before {
+    left: 100% !important;
+}
+
+/* Yellow/Gold button variant */
+.btn-yellow {
+    border-color: #ffbe0b !important;
+    color: #ffbe0b !important;
+}
+
+.btn-yellow:hover {
+    background: #ffbe0b !important;
+    box-shadow: 0 0 15px rgba(255, 190, 11, 0.4), inset 0 0 10px rgba(255, 190, 11, 0.3) !important;
+}
+
+/* Agenda items */
+.single_propram {
+    background: linear-gradient(90deg, rgba(0, 240, 255, 0.05) 0%, transparent 100%) !important;
+    border-left: 3px solid #00f0ff !important;
+    border-image: none !important;
+    padding: 35px 40px !important;
+    margin: 30px 0 !important;
+    transition: all 0.3s !important;
+    filter: none !important;
+}
+
+.single_propram::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 3px !important;
+    height: 0 !important;
+    background: linear-gradient(180deg, #ffbe0b, #ff6b00) !important;
+    transition: height 0.3s !important;
+    box-shadow: 0 0 10px #ffbe0b !important;
+}
+
+.single_propram:hover {
+    background: linear-gradient(90deg, rgba(0, 240, 255, 0.1) 0%, rgba(255, 190, 11, 0.05) 100%) !important;
+    border-left-width: 6px !important;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.15) !important;
+    transform: translateX(10px) !important;
+}
+
+.single_propram:hover::before {
+    height: 100% !important;
+}
+
+.single_propram .porgram_top span,
+.agenda-time {
+    color: #ffbe0b !important;
+    font-size: 1.6em !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+.single_propram h4 {
+    color: #00f0ff !important;
+    filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.3)) !important;
+}
+
+/* Timeline center line */
+.program_details_area .program_detail_wrap::before {
+    background: linear-gradient(180deg, #00f0ff 0%, #ffbe0b 100%) !important;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.6) !important;
+    width: 3px !important;
+}
+
+/* Circle indicators in timeline */
+.program_details_area .program_detail_wrap .single_propram .circle_img {
+    border-color: #00f0ff !important;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.8), inset 0 0 10px rgba(0, 240, 255, 0.6) !important;
+    background: rgba(0, 240, 255, 0.3) !important;
+}
+
+/* Location box */
+.location_information,
+.location-box {
+    background: linear-gradient(135deg, rgba(255, 190, 11, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
+    border: 1px solid rgba(255, 190, 11, 0.3) !important;
+    border-image: none !important;
+    clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px) !important;
+}
+
+.location_information h3 {
+    color: #ffbe0b !important;
+    filter: drop-shadow(0 0 6px rgba(255, 190, 11, 0.2)) !important;
+}
+
+.location_information .single_info span {
+    color: #ffbe0b !important;
+    text-shadow: none !important;
+    font-weight: 700 !important;
+    filter: none !important;
+}
+
+.location_information .single_info p,
+.location_information .single_info a {
+    color: rgba(0, 240, 255, 0.9) !important;
+    filter: none !important;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    border-top: 1px solid rgba(0, 240, 255, 0.3) !important;
+    border-image: none !important;
+}
+
+.footer::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -2px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, transparent, #00f0ff, #ffbe0b, transparent) !important;
+}
+
+/* Header */
+.header-area .main-header-area {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.3) !important;
+}
+
+.header-area .main-header-area .main-menu ul li a {
+    color: #00f0ff !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    font-size: 0.9em !important;
+    transition: all 0.3s !important;
+}
+
+.header-area .main-header-area .main-menu ul li a:hover {
+    color: #ffbe0b !important;
+    text-shadow: 0 0 20px #00f0ff !important;
+}
+
+/* Scroll up button */
+#scrollUp {
+    background: #00f0ff !important;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.4) !important;
+    color: #000 !important;
+}
+
+#scrollUp:hover {
+    background: #ffbe0b !important;
+    box-shadow: 0 0 15px rgba(255, 190, 11, 0.5) !important;
+    bottom: 25px !important;
+}
+
+/* Remove rainbow gradients from neon colors */
+.text-neon-blue {
+    color: #00f0ff !important;
+}
+
+.text-neon-pink {
+    color: #ffbe0b !important;
+}
+
+.text-neon-green {
+    color: #00f0ff !important;
+}
+
+.text-neon-purple {
+    color: #00f0ff !important;
+}
+
+.text-neon-orange {
+    color: #ffbe0b !important;
+}
+
+.text-neon-yellow {
+    color: #ffbe0b !important;
+}
+
+/* Update neon borders to use cyan/gold */
+.neon-border {
+    border: 2px solid #00f0ff !important;
+    box-shadow: 
+        inset 0 0 10px rgba(0, 240, 255, 0.4),
+        0 0 10px rgba(0, 240, 255, 0.4),
+        0 0 20px rgba(0, 240, 255, 0.3) !important;
+}
+
+.pulse-glow {
+    animation: pulse-glow-calm 2s ease-in-out infinite alternate !important;
+}
+
+@keyframes pulse-glow-calm {
+    from {
+        box-shadow: 
+            inset 0 0 10px rgba(0, 240, 255, 0.4),
+            0 0 10px rgba(0, 240, 255, 0.4),
+            0 0 20px rgba(0, 240, 255, 0.3);
+    }
+    to {
+        box-shadow: 
+            inset 0 0 15px rgba(0, 240, 255, 0.5),
+            0 0 15px rgba(0, 240, 255, 0.5),
+            0 0 30px rgba(0, 240, 255, 0.4);
+    }
+}
+
+/* Update grid background */
+.bg-grid {
+    background-image: 
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px) !important;
+    background-size: 50px 50px !important;
+}
+
+/* Area backgrounds */
+.about_area,
+.program_details_area,
+.performar_area {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 20, 40, 0.7) 100%) !important;
+}
+
+.about_area::before,
+.program_details_area::before,
+.performar_area::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #00f0ff 20%, 
+        #ffbe0b 50%,
+        #00f0ff 80%,
+        transparent 100%) !important;
+}
+
+/* Remove neon pulse animations */
+.neon-cfp {
+    animation: none !important;
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.5) !important;
+}
+
+/* Calm the neon glow text */
+.neon-glow-text {
+    filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.4)) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2em !important;
+    }
+    
+    .neon-card,
+    .single_propram {
+        padding: 15px !important;
+    }
+}
+
+/* ==========================================
+   ADDITIONAL PURPLE/MAGENTA OVERRIDES
+   Replace all remaining purple colors
+   ========================================== */
+
+/* Override any remaining magenta/purple text colors */
+[style*="magenta"],
+[style*="#ff00ff"],
+[style*="#ff00cc"],
+[style*="#a21caf"],
+[style*="rgb(216 180 254"],
+.text-purple-300,
+.text-purple-500,
+.border-purple-500,
+.bg-purple-900,
+.hover\:bg-purple-800:hover {
+    color: #ffbe0b !important;
+    border-color: #ffbe0b !important;
+}
+
+/* Override fuchsia colors */
+.text-fuchsia-500,
+[style*="fuchsia"] {
+    color: #ffbe0b !important;
+}
+
+/* Override purple drop shadows */
+[style*="drop-shadow"][style*="#ff00cc"],
+[style*="drop-shadow"][style*="#a21caf"] {
+    filter: drop-shadow(0 2px 16px #ffbe0b) !important;
+}
+
+/* Override purple box shadows */
+[style*="box-shadow"][style*="#a21caf"],
+[style*="box-shadow"][style*="#ff00cc"] {
+    box-shadow: 0 0 8px #ffbe0b, 0 0 16px #ffbe0b !important;
+}
+
+/* Mobile menu specific overrides */
+#mobile-menu-button {
+    border-color: #00f0ff !important;
+    color: #00f0ff !important;
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.3), 0 0 10px rgba(0, 240, 255, 0.2) !important;
+}
+
+#mobile-menu-button:hover {
+    background-color: rgba(0, 240, 255, 0.2) !important;
+}
+
+#mobile-menu-dropdown {
+    background: linear-gradient(to bottom right, #000000, rgba(0, 30, 60, 0.9), #000000) !important;
+    border-color: #00f0ff !important;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3), 0 0 20px rgba(0, 240, 255, 0.2) !important;
+}
+
+#mobile-menu-dropdown a {
+    color: #ffffff !important;
+}
+
+#mobile-menu-dropdown a:hover {
+    background-color: rgba(0, 240, 255, 0.2) !important;
+}
+
+/* CFP button in mobile menu */
+#mobile-menu-dropdown a[href*="forms.office.com"] {
+    background: linear-gradient(to right, #ffbe0b, #00f0ff, #ffbe0b) !important;
+    border-color: #ffbe0b !important;
+    color: #000 !important;
+    font-weight: bold !important;
+}
+
+#mobile-menu-dropdown a[href*="forms.office.com"]:hover {
+    background: linear-gradient(to right, #00f0ff, #ffbe0b, #00f0ff) !important;
+}
+
+/* Additional Tailwind purple class overrides */
+.text-purple-300,
+.text-purple-500,
+.text-purple-600,
+.text-purple-900,
+.text-fuchsia-500 {
+    color: #ffbe0b !important;
+}
+
+.border-purple-300,
+.border-purple-500,
+.border-purple-600,
+.border-purple-900 {
+    border-color: #00f0ff !important;
+}
+
+.bg-purple-300,
+.bg-purple-500,
+.bg-purple-600,
+.bg-purple-900,
+.via-purple-900 {
+    background-color: rgba(0, 30, 60, 0.9) !important;
+}
+
+.hover\:bg-purple-800:hover,
+.hover\:bg-purple-900:hover {
+    background-color: rgba(0, 240, 255, 0.2) !important;
+}
+
+.from-purple-600 {
+    --tw-gradient-from: #ffbe0b !important;
+}
+
+.to-purple-600 {
+    --tw-gradient-to: #00f0ff !important;
+}
+
+.via-pink-500 {
+    --tw-gradient-via: #00f0ff !important;
+}
+
+/* Override ALL mediumpurple references */
+.boxed-btn,
+.boxed-btn:hover,
+.boxed-btn3,
+.boxed-btn3:hover,
+.boxed-btn3-white,
+.boxed-btn3-white:hover,
+.boxed-btn3-line,
+.boxed-btn3-line:hover,
+.boxed-btn2,
+.boxed-btn2:hover,
+.boxed-btn4,
+.boxed-btn4:hover,
+[style*="mediumpurple"],
+.text-mediumpurple {
+    color: #00f0ff !important;
+    border-color: #00f0ff !important;
+}
+
+.boxed-btn:hover,
+.boxed-btn3:hover,
+.boxed-btn3-white:hover,
+.boxed-btn3-line:hover,
+.boxed-btn2:hover,
+.boxed-btn4:hover {
+    background: #00f0ff !important;
+    color: #000 !important;
+}
+
+#scrollUp,
+[style*="background"][style*="mediumpurple"],
+.bg-mediumpurple {
+    background: #00f0ff !important;
+}
+
+/* Override gradient with mediumpurple */
+[style*="linear-gradient"][style*="mediumpurple"] {
+    background: linear-gradient(131deg, #00f0ff 0%, #ffbe0b 99%) !important;
+}
+
