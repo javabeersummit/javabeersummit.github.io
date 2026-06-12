@@ -1,0 +1,238 @@
+{
+  "year": 2022,
+  "title": "Java Beer Summit",
+  "tagline": "Free beers and networking.",
+  "heroImage": "/assets/images/banner-2022-2024.jpg",
+  "heroImagePosition": "center center",
+  "date": "2022-08-30",
+  "doorsOpen": "19:30",
+  "statusOverride": null,
+  "location": {
+    "name": "Maimunarnika",
+    "city": "Sofia, Bulgaria",
+    "address": "Borisovata Gradina, Sofia, Bulgaria",
+    "description": "The legendary open-air bar in Borisova Gradina — beer under the trees, a stage in the middle of the park, and the whole summer evening around it.",
+    "directions": "Inside Borisova Gradina park. Easiest on foot from the Eagles' Bridge entrance.",
+    "mapEmbed": "https://maps.google.com/maps?q=42.683313,23.3428218&hl=en&z=17&output=embed",
+    "mapLink": "https://www.google.com/maps/place/%D0%9C%D0%B0%D0%B9%D0%BC%D1%83%D0%BD%D0%B0%D1%80%D0%BD%D0%B8%D0%BA%D0%B0/@42.6833169,23.3406278,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85a34779b017:0x18502968816b6d98!8m2!3d42.683313!4d23.3428218"
+  },
+  "about": {
+    "intro": "A fun evening of beer and informal Java talks at Maimunarnika, Sofia — organized by the Bulgarian Java User Group and random beer fans from Bulgaria. There was an agenda published before the event, but everyone was welcome to take the stage and talk. Entrance was free and registration optional — last-minute friends explicitly included.",
+    "highlights": [
+      {
+        "icon": "🍺",
+        "title": "Beer (and wine!)",
+        "text": "Don't drink beer? No problem — there was wine as well, and even french fries… or were they belgian? 🤔"
+      },
+      {
+        "icon": "🎤",
+        "title": "Stand-up over slides",
+        "text": "Short, stand-up-like talks instead of deep technical ones — with sponsors hopping on stage between speakers to say welcome and cheers."
+      },
+      {
+        "icon": "🆓",
+        "title": "Free for everyone",
+        "text": "Free entrance, optional registration. Bring your last-minute friends and anyone up for beer and Java talks."
+      },
+      {
+        "icon": "🎤",
+        "title": "Open mic finale",
+        "text": "The night wrapped up with lightning talks — the stage was yours: grab a beer, a laptop (optional) and say whatever you wanted."
+      }
+    ]
+  },
+  "organizers": [
+    {
+      "name": "Bulgarian Java User Group",
+      "url": "https://jug.bg",
+      "logo": "/sponsors/bgjug.png",
+      "darkLogo": true
+    }
+  ],
+  "cfp": {
+    "url": "",
+    "deadline": "",
+    "note": ""
+  },
+  "registration": {
+    "url": "",
+    "note": "Free for everyone — registration optional."
+  },
+  "schedule": [
+    {
+      "time": "19:30–20:00",
+      "type": "break",
+      "title": "Opening",
+      "abstract": "Welcome talk by Bulgarian Java User Group and friends*."
+    },
+    {
+      "time": "20:00–20:15",
+      "type": "talk",
+      "title": "AI is teaching Java",
+      "speaker": "Явор Петков"
+    },
+    {
+      "time": "20:15–20:30",
+      "type": "break",
+      "title": "Welcome by our sponsors",
+      "abstract": "Tide Bulgaria, EPAM, Westernacher and Rewe Digital welcome you to the Java Beer Summit!"
+    },
+    {
+      "time": "20:30–20:45",
+      "type": "talk",
+      "title": "You're already a good developer. So what's next?",
+      "speaker": "Стефан Вадев",
+      "abstract": "В лекцията ще се разкаже какви са възможностите ни, след като вече сме станали добри програмисти. Какъв път можем да поемем от там нататък, какви кариерни разклонения има, и докъде можем да стигнем."
+    },
+    {
+      "time": "20:45–21:00",
+      "type": "break",
+      "title": "Welcome by our sponsors",
+      "abstract": "SAP, Dreamix, Software AG and Halo Diagnostics welcome you to the Java Beer Summit!"
+    },
+    {
+      "time": "21:00–21:15",
+      "type": "talk",
+      "title": "What is next after Agile?",
+      "abstract": "Agile дойде след Waterfall. Ще дискутираме какво подобри и какво развали. Това ли е бъдещето? Няма ли нещо яко на хоризонта? Цял живот ли ще правим Scrum и Kanban и ще се интересуваме от story points и velocity? Това ли е да си програмист?"
+    },
+    {
+      "time": "21:15–21:30",
+      "type": "break",
+      "title": "Welcome by our sponsors",
+      "abstract": "Questers, ROITI, Infinite Lambda and Delasport welcome you to the Java Beer Summit!"
+    },
+    {
+      "time": "21:30–21:45",
+      "type": "talk",
+      "title": "Програмиране ≠ текстообработка",
+      "speaker": "Данаил Алексиев",
+      "abstract": "Забавна и поучителна история за Microsoft Access, node.js и генерирането на Java код за Андроид и защо тези неща никога не трябва да се споменават заедно."
+    },
+    {
+      "time": "21:45–22:00",
+      "type": "break",
+      "title": "Cheers by our sponsors",
+      "abstract": "CommerzBank, Codexio, Cognyte and Ciklum say cheers!"
+    },
+    {
+      "time": "22:00–22:15",
+      "type": "talk",
+      "title": "Java on Steroids",
+      "speaker": "Stefan Angelov",
+      "abstract": "In this talk, we will dive into why Java and why it's been on steroids for the last couple of years."
+    },
+    {
+      "time": "22:15–22:20",
+      "type": "break",
+      "title": "BG JUG says cheers and thanks",
+      "abstract": "This is not the event closing. We'll continue to drink beer and network as long as we can! :)"
+    },
+    {
+      "time": "22:20+",
+      "type": "lightning",
+      "title": "Lightning talks",
+      "abstract": "Everyone can talk about whatever they want! The stage is yours — just grab a beer and/or a laptop (optional) and come up. Please introduce yourself first! :)"
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Bulgarian Java User Group",
+      "url": "https://jug.bg",
+      "logo": "/sponsors/bgjug.png",
+      "darkLogo": true
+    },
+    {
+      "name": "TIDE Bulgaria",
+      "url": "https://tide.co",
+      "logo": "/sponsors/tide.png"
+    },
+    {
+      "name": "EPAM Bulgaria",
+      "url": "https://epam.com",
+      "logo": "/sponsors/epam.webp"
+    },
+    {
+      "name": "HALO Diagnostics",
+      "url": "https://www.halodx.com/",
+      "logo": "/sponsors/halo-diagnostics.png"
+    },
+    {
+      "name": "REWE Digital",
+      "url": "https://rewe-digital.com",
+      "logo": "/sponsors/rewe-digital.jpg"
+    },
+    {
+      "name": "SAP",
+      "url": "https://www.sap.com/bulgaria/",
+      "logo": "/sponsors/sap.svg"
+    },
+    {
+      "name": "Westernacher",
+      "url": "https://westernacher-solutions.com/",
+      "logo": "/sponsors/westernacher.svg"
+    },
+    {
+      "name": "Dreamix",
+      "url": "https://dreamix.eu/",
+      "logo": "/sponsors/dreamix.svg"
+    },
+    {
+      "name": "Software AG",
+      "url": "https://softwareag.com/",
+      "logo": "/sponsors/software-ag.png"
+    },
+    {
+      "name": "Questers",
+      "url": "https://questers.com/",
+      "logo": "/sponsors/questers.png"
+    },
+    {
+      "name": "ROITI",
+      "url": "https://roiti.com/",
+      "logo": "/sponsors/roiti.png"
+    },
+    {
+      "name": "Commerzbank",
+      "url": "https://sofia.commerzbank.bg/",
+      "logo": "/sponsors/commerzbank.svg"
+    },
+    {
+      "name": "Codexio",
+      "url": "https://codexio.bg/",
+      "logo": "/sponsors/codexio.png",
+      "darkLogo": true
+    },
+    {
+      "name": "Infinite Lambda",
+      "url": "https://infinitelambda.com/",
+      "logo": "/sponsors/infinite-lambda.svg"
+    },
+    {
+      "name": "Cognyte",
+      "url": "https://cognyte.com/",
+      "logo": "/sponsors/cognyte.svg"
+    },
+    {
+      "name": "Delasport",
+      "url": "https://www.delasport.com",
+      "logo": "/sponsors/delasport.png"
+    },
+    {
+      "name": "Ciklum",
+      "url": "https://ciklum.com",
+      "logo": "/sponsors/ciklum.png"
+    }
+  ],
+  "sponsorContact": "java.beer@codexio.bg",
+  "gallery": {
+    "photos": [
+      "/gallery/2022/473622254_1792990561462303_2625976317153333352_n.jpg",
+      "/gallery/2022/473682048_1792990271462332_2153646833491129781_n.jpg",
+      "/gallery/2022/473804031_1792990664795626_3159077737716284879_n.jpg",
+      "/gallery/2022/474085590_1792990688128957_514394735236748334_n.jpg",
+      "/gallery/2022/474452080_1792990731462286_5276507046675889407_n.jpg"
+    ],
+    "videos": []
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "year": 2023,
+  "title": "Java Beer Summit",
+  "tagline": "Free beers and networking.",
+  "heroImage": "/assets/images/banner-2022-2024.jpg",
+  "heroImagePosition": "center center",
+  "date": "2023-08-29",
+  "doorsOpen": "19:30",
+  "statusOverride": null,
+  "location": {
+    "name": "Maimunarnika",
+    "city": "Sofia, Bulgaria",
+    "address": "Borisovata Gradina, Sofia, Bulgaria",
+    "description": "The legendary open-air bar in Borisova Gradina — beer under the trees, a stage in the middle of the park, and the whole summer evening around it.",
+    "directions": "Inside Borisova Gradina park. Easiest on foot from the Eagles' Bridge entrance.",
+    "mapEmbed": "https://maps.google.com/maps?q=42.683313,23.3428218&hl=en&z=17&output=embed",
+    "mapLink": "https://www.google.com/maps/place/%D0%9C%D0%B0%D0%B9%D0%BC%D1%83%D0%BD%D0%B0%D1%80%D0%BD%D0%B8%D0%BA%D0%B0/@42.6833169,23.3406278,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85a34779b017:0x18502968816b6d98!8m2!3d42.683313!4d23.3428218"
+  },
+  "about": {
+    "intro": "The event was organized by the Bulgarian Java User Group and random beer fans from Bulgaria. There was an agenda before the event, but everyone could go to the stage and talk if desired — an open-mic night of beer and Java, with sponsors welcome to grab the stage at any time.",
+    "highlights": [
+      {
+        "icon": "🍺",
+        "title": "Beer (and wine!)",
+        "text": "Don't drink beer? No problem — there was wine as well, and even french fries… or were they belgian? 🤔"
+      },
+      {
+        "icon": "🎤",
+        "title": "Open mic energy",
+        "text": "Lightning talks and open-mic slots all night — sponsors could hop on stage for a welcome or cheers at the same time."
+      },
+      {
+        "icon": "🆓",
+        "title": "Free for everyone",
+        "text": "Free entrance, optional registration. Last-minute friends explicitly included."
+      },
+      {
+        "icon": "🎁",
+        "title": "Raffle & gifts",
+        "text": "Sponsors came to the stage with gifts and closing words before the evening wound down."
+      }
+    ]
+  },
+  "organizers": [
+    {
+      "name": "Bulgarian Java User Group",
+      "url": "https://jug.bg",
+      "logo": "/sponsors/bgjug.png",
+      "darkLogo": true
+    }
+  ],
+  "cfp": {
+    "url": "",
+    "deadline": "",
+    "note": ""
+  },
+  "registration": {
+    "url": "",
+    "note": "Free for everyone — registration optional."
+  },
+  "schedule": [
+    {
+      "time": "19:30–20:00",
+      "type": "break",
+      "title": "Opening",
+      "abstract": "Welcome talk by Bulgarian Java User Group and friends*."
+    },
+    {
+      "time": "20:00–22:00",
+      "type": "lightning",
+      "title": "Lightning talks",
+      "abstract": "Open Mic talks — you could come to the stage and talk about everything."
+    },
+    {
+      "time": "20:00–22:00",
+      "type": "break",
+      "title": "Welcome and cheers!",
+      "abstract": "Yes, at the same time every sponsor could also come to the stage and say welcome or cheers."
+    },
+    {
+      "time": "22:00–23:00",
+      "type": "break",
+      "title": "Open Mic continues",
+      "abstract": "If you are drunk or have superpowers you have the opportunity to give a speech, tell a story or give a toast!"
+    },
+    {
+      "time": "22:00–23:00",
+      "type": "break",
+      "title": "Raffle & Gifts",
+      "abstract": "Our sponsors could come and give some gifts or say some closing words."
+    },
+    {
+      "time": "23:00–23:15",
+      "type": "break",
+      "title": "JUG drunk talks?",
+      "abstract": "Bulgarian Java User Group leaders could say some drunk talks & try to close the event."
+    },
+    {
+      "time": "23:15–23:30",
+      "type": "break",
+      "title": "Still here?",
+      "abstract": "Are you still here? You should be pretty drunk already so why do you even care about the agenda?"
+    },
+    {
+      "time": "23:30–23:45",
+      "type": "break",
+      "title": "Whats next?",
+      "abstract": "Really? Who in the world will still be at Maimunarnika at that hour? This is not a rock concert after all ;)"
+    },
+    {
+      "time": "23:45–24:00",
+      "type": "break",
+      "title": "No hope",
+      "abstract": "At that point we don't know if Maimunarnika is even working — I expect the lights to turn off. Go home, no more java and/or beer for you tonight!"
+    },
+    {
+      "time": "00:00–02:00",
+      "type": "break",
+      "title": "Alcohol strikes back!",
+      "abstract": "At that point you should feel the beer or other drinks and regret the fact you drank that much."
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Bulgarian Java User Group",
+      "url": "https://jug.bg",
+      "logo": "/sponsors/bgjug.png",
+      "darkLogo": true
+    },
+    {
+      "name": "EPAM Bulgaria",
+      "url": "https://epam.com",
+      "logo": "/sponsors/epam.webp"
+    },
+    {
+      "name": "HALO Diagnostics",
+      "url": "https://www.halodx.com/",
+      "logo": "/sponsors/halo-diagnostics.png"
+    },
+    {
+      "name": "GeoWealth",
+      "url": "https://www.geowealth.com/",
+      "logo": "/sponsors/geowealth.png"
+    },
+    {
+      "name": "REWE Digital",
+      "url": "https://rewe-digital.com",
+      "logo": "/sponsors/rewe-digital.jpg"
+    },
+    {
+      "name": "Westernacher",
+      "url": "https://westernacher-solutions.com/",
+      "logo": "/sponsors/westernacher.svg"
+    },
+    {
+      "name": "Software AG",
+      "url": "https://softwareag.com/",
+      "logo": "/sponsors/software-ag.png"
+    },
+    {
+      "name": "Codexio",
+      "url": "https://codexio.bg/",
+      "logo": "/sponsors/codexio.png",
+      "darkLogo": true
+    },
+    {
+      "name": "Amusnet",
+      "url": "https://amusnet.com/",
+      "logo": "/sponsors/amusnet.png"
+    },
+    {
+      "name": "Cognyte",
+      "url": "https://cognyte.com/",
+      "logo": "/sponsors/cognyte.svg"
+    }
+  ],
+  "sponsorContact": "java.beer@codexio.bg",
+  "gallery": {
+    "photos": [
+      "/gallery/2023/IMG_8261.JPG",
+      "/gallery/2023/IMG_8262.JPG",
+      "/gallery/2023/IMG_8263.JPG"
+    ],
+    "videos": []
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "year": 2025,
+  "title": "Java Beer Summit",
+  "tagline": "Free beers and networking.",
+  "heroImage": "/assets/images/banner-monkeys.jpg",
+  "heroImagePosition": "center center",
+  "date": "2025-08-26",
+  "doorsOpen": "19:30",
+  "statusOverride": null,
+  "location": {
+    "name": "Maimunarnika",
+    "city": "Sofia, Bulgaria",
+    "address": "Borisovata Gradina, Sofia, Bulgaria",
+    "description": "The legendary open-air bar in Borisova Gradina — beer under the trees, a stage in the middle of the park, and the whole summer evening around it.",
+    "directions": "Inside Borisova Gradina park. Easiest on foot from the Eagles' Bridge entrance.",
+    "mapEmbed": "https://maps.google.com/maps?q=42.683313,23.3428218&hl=en&z=17&output=embed",
+    "mapLink": "https://www.google.com/maps/place/%D0%9C%D0%B0%D0%B9%D0%BC%D1%83%D0%BD%D0%B0%D1%80%D0%BD%D0%B8%D0%BA%D0%B0/@42.6833169,23.3406278,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85a34779b017:0x18502968816b6d98!8m2!3d42.683313!4d23.3428218"
+  },
+  "about": {
+    "intro": "A fun evening of beer and informal Java talks at Maimunarnika, Sofia — organized by the Bulgarian Java User Group, Codexio and random beer fans from Bulgaria. There was an agenda published before the event, but everyone was welcome to take the stage and talk. Entrance was free and registration optional — last-minute friends explicitly included.",
+    "highlights": [
+      {
+        "icon": "🍺",
+        "title": "Beer (and wine!)",
+        "text": "Don't drink beer? No problem — there was wine as well, and even french fries… or were they belgian? 🤔"
+      },
+      {
+        "icon": "🎤",
+        "title": "Stand-up over slides",
+        "text": "Stand-up-like talks instead of deep technical ones — to keep the attendees' attention where it belongs: on the fun."
+      },
+      {
+        "icon": "🆓",
+        "title": "Free for everyone",
+        "text": "Free entrance, optional registration. Bring your last-minute friends and anyone up for beer and Java talks."
+      },
+      {
+        "icon": "🎁",
+        "title": "Raffle finale",
+        "text": "The evening wrapped up with a raffle by the event organizers."
+      }
+    ]
+  },
+  "organizers": [
+    {
+      "name": "Bulgarian Java User Group",
+      "url": "https://jug.bg",
+      "logo": "/sponsors/bgjug.png",
+      "darkLogo": true
+    },
+    {
+      "name": "Codexio",
+      "url": "https://codexio.bg/",
+      "logo": "/sponsors/codexio.png",
+      "darkLogo": true
+    }
+  ],
+  "cfp": {
+    "url": "https://forms.office.com/e/2TUi6hD72i",
+    "deadline": "",
+    "note": ""
+  },
+  "registration": {
+    "url": "https://www.facebook.com/events/1460082218687653",
+    "note": "Free for everyone — registration optional."
+  },
+  "schedule": [
+    {
+      "time": "19:30–20:00",
+      "type": "break",
+      "title": "Opening",
+      "abstract": "Welcome talk by Bulgarian Java User Group, Codexio and friends*."
+    },
+    {
+      "time": "20:00–20:30",
+      "type": "break",
+      "title": "Meeting the sponsors"
+    },
+    {
+      "time": "20:30–20:45",
+      "type": "talk",
+      "title": "Can Java Ever Replace Python in AI",
+      "speaker": "Stefan Angelov"
+    },
+    {
+      "time": "20:45–21:00",
+      "type": "talk",
+      "title": "Rebuilding in Motion: Unpacking the Monolith into Microservices Without Hitting Pause on Product Delivery",
+      "speaker": "Aleksander Aleksandrov"
+    },
+    {
+      "time": "21:00–21:15",
+      "type": "talk",
+      "title": "You were obsolete long before AI",
+      "speaker": "Ivan Yonkov"
+    },
+    {
+      "time": "21:15–21:30",
+      "type": "talk",
+      "title": "I hope AI is going to replace me",
+      "speaker": "Ivaylo Zhelev"
+    },
+    {
+      "time": "21:30–21:45",
+      "type": "talk",
+      "title": "Bad developers write awful prompts, so you still have a chance",
+      "speaker": "Yoana Borissova"
+    },
+    {
+      "time": "21:45–22:00",
+      "type": "break",
+      "title": "Raffle",
+      "abstract": "Raffle by the event organizers."
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Epam",
+      "logo": "/sponsors/epam.webp",
+      "url": "https://epam.com"
+    },
+    {
+      "name": "Trading 212",
+      "logo": "/sponsors/trading212.svg",
+      "url": "https://www.trading212.com/"
+    },
+    {
+      "name": "Endava",
+      "logo": "/sponsors/endava.svg",
+      "url": "https://www.endava.com/",
+      "darkLogo": true
+    },
+    {
+      "name": "Limechain",
+      "logo": "/sponsors/limechain.webp",
+      "url": "https://www.limechain.tech",
+      "darkLogo": true
+    },
+    {
+      "name": "SAP",
+      "logo": "/sponsors/sap.svg",
+      "url": "https://www.sap.com/bulgaria/"
+    },
+    {
+      "name": "Tide",
+      "logo": "/sponsors/tide.png",
+      "url": "https://tide.co"
+    },
+    {
+      "name": "Hyperscience",
+      "logo": "/sponsors/hyperscience.png",
+      "url": "https://www.hyperscience.ai",
+      "darkLogo": true
+    }
+  ],
+  "sponsorContact": "java.beer@codexio.bg",
+  "gallery": {
+    "photos": [
+      "/gallery/2025/photo_2026-06-12_16-03-28.jpg",
+      "/gallery/2025/photo_2026-06-12_16-04-06.jpg",
+      "/gallery/2025/photo_2026-06-12_16-04-17.jpg",
+      "/gallery/2025/photo_2026-06-12_16-04-25.jpg",
+      "/gallery/2025/photo_2026-06-12_16-04-38.jpg",
+      "/gallery/2025/photo_2026-06-12_16-04-51.jpg",
+      "/gallery/2025/photo_2026-06-12_16-04-57.jpg",
+      "/gallery/2025/photo_2026-06-12_16-05-05.jpg",
+      "/gallery/2025/photo_2026-06-12_16-05-10.jpg",
+      "/gallery/2025/photo_2026-06-12_16-05-17.jpg"
+    ],
+    "videos": [
+      {
+        "title": "Java Beer Summit 2025 — clip 1",
+        "src": "/gallery/2025/video-01.mp4"
+      },
+      {
+        "title": "Java Beer Summit 2025 — clip 2",
+        "src": "/gallery/2025/video-02.mp4"
+      }
+    ]
+  }
+}
