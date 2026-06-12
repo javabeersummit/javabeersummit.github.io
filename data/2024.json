@@ -180,12 +180,7 @@
   ],
   "sponsorContact": "java.beer@codexio.bg",
   "gallery": {
-    "photos": [
-      "/gallery/2024/photo-01.svg",
-      "/gallery/2024/photo-02.svg",
-      "/gallery/2024/photo-03.svg",
-      "/gallery/2024/photo-04.svg"
-    ],
+    "photos": [],
     "videos": []
   }
 }
