@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Java Beer Summit</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+  <main class="wrap notfound">
+    <p class="notfound-code">// 404</p>
+    <div class="clink play" id="clink404" role="img" aria-label="Two beer mugs clinking — Наздраве!" title="Click for another round">
+      <svg viewBox="0 0 360 195" aria-hidden="true" focusable="false">
+        <text class="toast-txt" x="180" y="34" text-anchor="middle">Наздраве!</text>
+        <g class="splash">
+          <circle cx="180" cy="76" r="5"/><circle cx="163" cy="64" r="3.5"/>
+          <circle cx="197" cy="62" r="4"/><circle cx="174" cy="52" r="2.5"/>
+          <circle cx="190" cy="84" r="3"/>
+          <path d="M156 80 L148 74 M204 78 L212 72 M180 46 L180 36"/>
+        </g>
+        <g class="mug mugL">
+          <path class="handle" d="M72 92 h-24 a17 17 0 0 0 0 38 h24"/>
+          <rect class="glass" x="70" y="70" width="84" height="100" rx="10"/>
+          <rect class="beer" x="78" y="90" width="68" height="72" rx="6"/>
+          <circle class="foam-c" cx="86" cy="78" r="11"/><circle class="foam-c" cx="111" cy="71" r="14"/><circle class="foam-c" cx="137" cy="78" r="11"/>
+          <rect class="foam-r" x="74" y="74" width="76" height="12"/>
+        </g>
+        <g class="mug mugR">
+          <path class="handle" d="M288 92 h24 a17 17 0 0 1 0 38 h-24"/>
+          <rect class="glass" x="206" y="70" width="84" height="100" rx="10"/>
+          <rect class="beer" x="214" y="90" width="68" height="72" rx="6"/>
+          <circle class="foam-c" cx="222" cy="78" r="11"/><circle class="foam-c" cx="248" cy="71" r="14"/><circle class="foam-c" cx="274" cy="78" r="11"/>
+          <rect class="foam-r" x="210" y="74" width="76" height="12"/>
+        </g>
+      </svg>
+    </div>
+    <h1>This glass is empty.</h1>
+    <p>The page you're after doesn't exist — maybe it was drunk in a previous edition.</p>
+    <p><a class="btn btn-primary" href="/">Back to the bar</a></p>
+  </main>
+  <script>
+    (function () {
+      var c = document.getElementById("clink404");
+      c.addEventListener("click", function () {
+        c.classList.remove("play");
+        void c.offsetWidth;
+        c.classList.add("play");
+      });
+    })();
+  </script>
+</body>
+</html>

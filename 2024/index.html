@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Java Beer Summit</title>
+  <meta name="description" content="Java Beer Summit — a free, community-run evening of short tech talks and cold beer in an open-air bar in the park. Sofia, Bulgaria." />
+  <meta property="og:title" content="Java Beer Summit" />
+  <meta property="og:description" content="Short talks. Cold beers. Warm summer nights. A free community tech event in the park." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Java Beer Summit home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 8h9v12a1.5 1.5 0 0 1-1.5 1.5h-6A1.5 1.5 0 0 1 6 20V8Z"/>
+            <path d="M15 10h2.2A1.8 1.8 0 0 1 19 11.8v3.4a1.8 1.8 0 0 1-1.8 1.8H15"/>
+            <path d="M5.5 8c-.5-2 .6-3.4 2.2-3.6C8 2.9 9.6 2.2 11 2.7c1-.6 2.4-.4 3.1.4 1.6-.1 2.7 1.1 2.4 2.6"/>
+          </svg>
+        </span>
+        <span class="brand-text">Java Beer Summit</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Sections"></nav>
+      <div class="header-tools">
+        <label class="year-switch">
+          <span class="visually-hidden">Switch edition</span>
+          <select id="year-select" aria-label="Switch edition"></select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <div id="archive-banner"></div>
+
+  <main id="main" aria-busy="true"></main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Photo viewer">
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Previous photo">‹</button>
+    <img id="lightbox-img" alt="" />
+    <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Next photo">›</button>
+  </dialog>
+
+  <noscript>
+    <div class="noscript-note wrap">
+      This site needs JavaScript to load the programme data. The schedule, sponsors and venue
+      details live in the <a href="/data/">/data</a> folder as JSON if you want them raw.
+    </div>
+  </noscript>
+
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

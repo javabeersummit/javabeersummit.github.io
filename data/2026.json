@@ -1,0 +1,145 @@
+{
+  "year": 2026,
+  "title": "Java Beer Summit",
+  "tagline": "Short talks. Cold beers. Warm summer nights.",
+  "date": "TBA",
+  "doorsOpen": "17:30",
+  "statusOverride": null,
+  "location": {
+    "name": "TBA",
+    "city": "Sofia, Bulgaria",
+    "address": "TBA",
+    "description": "Venue to be announced — check back soon.",
+    "directions": "",
+    "mapEmbed": null,
+    "mapLink": null
+  },
+  "about": {
+    "intro": "Java Beer Summit is an annual event co-organized by the [Bulgarian Java User Group](https://jug.bg) and [Codexio](https://codexio.bg). It brings the Java community together in an informal setting, aiming to strengthen bonds within the community and welcome new people into it. The audience mainly consists of Java community supporters and newcomers drawn into their orbit. The event takes place in the open-air bar usually in Borissova Garden. The exact venue will be soon announced. It will be on August 26, 2026. There is a stage where short talks are held with the goal of lifting the mood of attendees.",
+    "highlights": [
+      {
+        "icon": "🍺",
+        "title": "Beer-first format",
+        "text": "Cold local craft beer on tap all evening. Talks are short, so your glass never gets warm."
+      },
+      {
+        "icon": "⚡",
+        "title": "Short & sharp talks",
+        "text": "15–20 minute talks plus a lightning round. If a topic isn't your thing, the next one is a beer away."
+      },
+      {
+        "icon": "🌳",
+        "title": "Open air, zero AC",
+        "text": "An open-air bar in the park on a July evening. Bring sunglasses for the first talk and a hoodie for the last."
+      },
+      {
+        "icon": "🤝",
+        "title": "Community-run",
+        "text": "Organised by volunteers, free to attend, backed by sponsors who get what a community event is."
+      }
+    ]
+  },
+  "organizers": [
+    {
+      "name": "Bulgarian Java User Group",
+      "url": "https://jug.bg",
+      "logo": "/sponsors/bgjug.png"
+    },
+    {
+      "name": "Codexio",
+      "url": "https://codexio.bg/",
+      "logo": "/sponsors/codexio.png"
+    }
+  ],
+  "cfp": {
+    "url": "https://forms.cloud.microsoft/e/LQL2jeW28N",
+    "deadline": "",
+    "note": "Got a talk in you? Pitch a subject and a few sentences about it — short, beer-friendly talks welcome. We'll get back to you about a slot."
+  },
+  "registration": {
+    "url": "https://forms.cloud.microsoft/e/zQm7Q7j2Vi",
+    "note": "Free entry — register so we know roughly how much beer to pour."
+  },
+  "schedule": [
+    {
+      "time": "17:30",
+      "type": "break",
+      "title": "Doors open — first pour"
+    },
+    {
+      "time": "18:00",
+      "type": "break",
+      "title": "Welcome toast from the organisers"
+    },
+    {
+      "time": "18:15",
+      "type": "talk",
+      "title": "TBA",
+      "speaker": "TBA"
+    },
+    {
+      "time": "18:45",
+      "type": "talk",
+      "title": "TBA",
+      "speaker": "TBA"
+    },
+    {
+      "time": "19:15",
+      "type": "break",
+      "title": "Beer break — refill round"
+    },
+    {
+      "time": "19:30",
+      "type": "lightning",
+      "title": "TBA",
+      "speaker": "TBA"
+    },
+    {
+      "time": "20:00",
+      "type": "talk",
+      "title": "TBA",
+      "speaker": "TBA"
+    },
+    {
+      "time": "20:30",
+      "type": "break",
+      "title": "Open bar hangout until the lights go out"
+    }
+  ],
+  "sponsors": [],
+  "sponsorContact": "java.beer@codexio.bg",
+  "sponsorPackages": {
+    "show": true,
+    "formUrl": "https://forms.cloud.microsoft/e/QQ68SPK9qU",
+    "intro": "The event is free for attendees — sponsors are what keep the kegs full and the projector running. Here's what's on tap for 2026:",
+    "packages": [
+      {
+        "name": "BOOTHIFUL",
+        "price": "800 EUR",
+        "featured": true,
+        "perks": [
+          "NETWORKING",
+          "STAGE ACCESS",
+          "BEER ACCESS",
+          "DEVS ACCESS :)",
+          "You can bring branded booth or use a high table",
+          "WITH BOOTH"
+        ]
+      },
+      {
+        "name": "BOOTHLESS",
+        "price": "500 EUR",
+        "featured": false,
+        "perks": [
+          "NETWORKING",
+          "STAGE ACCESS",
+          "BEER ACCESS",
+          "DEVS ACCESS :)",
+          "but can't use a booth",
+          "WITHOUT BOOTH"
+        ]
+      }
+    ]
+  },
+  "gallery": null
+}
