@@ -1,8 +1,8 @@
 {
   "year": 2026,
   "title": "Java Beer Summit",
-  "tagline": "Short talks. Cold beers. Warm summer nights.",
-  "date": "TBA",
+  "tagline": "The biggest summer Java event in Sofia",
+  "date": "2026-08-25",
   "doorsOpen": "17:30",
   "statusOverride": null,
   "location": {
@@ -15,29 +15,8 @@
     "mapLink": null
   },
   "about": {
-    "intro": "Java Beer Summit is an annual event co-organized by the [Bulgarian Java User Group](https://jug.bg) and [Codexio](https://codexio.bg). It brings the Java community together in an informal setting, aiming to strengthen bonds within the community and welcome new people into it. The audience mainly consists of Java community supporters and newcomers drawn into their orbit. The event takes place in the open-air bar usually in Borissova Garden. The exact venue will be soon announced. It will be on August 26, 2026. There is a stage where short talks are held with the goal of lifting the mood of attendees.",
-    "highlights": [
-      {
-        "icon": "🍺",
-        "title": "Beer-first format",
-        "text": "Cold local craft beer on tap all evening. Talks are short, so your glass never gets warm."
-      },
-      {
-        "icon": "⚡",
-        "title": "Short & sharp talks",
-        "text": "15–20 minute talks plus a lightning round. If a topic isn't your thing, the next one is a beer away."
-      },
-      {
-        "icon": "🌳",
-        "title": "Open air, zero AC",
-        "text": "An open-air bar in the park on a July evening. Bring sunglasses for the first talk and a hoodie for the last."
-      },
-      {
-        "icon": "🤝",
-        "title": "Community-run",
-        "text": "Organised by volunteers, free to attend, backed by sponsors who get what a community event is."
-      }
-    ]
+    "intro": "Java Beer Summit is an annual event co-organized by the [Bulgarian Java User Group](https://jug.bg) and [Codexio](https://codexio.bg). It brings the Java community together in an informal setting, aiming to strengthen bonds within the community and welcome new people into it. The audience mainly consists of Java community supporters and newcomers drawn into their orbit. The event takes place in the open-air bar usually in Borissova Garden. The exact venue will be soon announced. It will be on August 25, 2026. There is a stage where short talks are held with the goal of lifting the mood of attendees.",
+    "highlights": []
   },
   "organizers": [
     {
@@ -115,7 +94,7 @@
     "packages": [
       {
         "name": "BOOTHIFUL",
-        "price": "800 EUR",
+        "price": "1000 EUR",
         "featured": true,
         "perks": [
           "NETWORKING",
@@ -128,7 +107,7 @@
       },
       {
         "name": "BOOTHLESS",
-        "price": "500 EUR",
+        "price": "800 EUR",
         "featured": false,
         "perks": [
           "NETWORKING",

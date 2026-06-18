@@ -550,8 +550,7 @@
     }).join(" · ");
     return (
       '<div class="wrap footer-inner">' +
-      "<div>🍺 <strong>Java Beer Summit</strong> — community-run, since " +
-      manifest.years[manifest.years.length - 1] + "<br/>Editions: " + editions + "</div>" +
+      "<div>🍺 <strong>Java Beer Summit</strong><br/>Editions: " + editions + "</div>" +
       '<div class="mono">while(summer) { talk(); drink(); }</div>' +
       "</div>"
     );
