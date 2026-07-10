@@ -68,13 +68,17 @@
 
   /* ---------- header: nav + year switcher ---------- */
 
-  function renderNav(data, status) {
+  function renderNav(data, status, opts) {
+    opts = opts || {};
     var items = [
       ["#about", "About"],
       ["#schedule", "Schedule"],
       ["#sponsors", "Sponsors"],
       ["#location", "Location"]
     ];
+    if (opts.showPastEditions) {
+      items.push(["#past-editions", "Past editions"]);
+    }
     if (data.gallery && data.gallery.photos && data.gallery.photos.length) {
       items.push(["#gallery", "Gallery"]);
     }
@@ -621,7 +625,7 @@
     var targets = document.querySelectorAll(
       ".section-head, .about-intro, .highlight, .sponsor-card, .package, .cta-card, " +
       ".timeline-slot, .timeline-phase-label, .schedule-doors, .schedule-empty, " +
-      ".photo-grid button, .video-card, .location-grid > *"
+      ".photo-grid button, .video-card, .location-grid > *, .past-edition__card"
     );
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -733,6 +737,200 @@
     });
   }
 
+  /* ---------- past editions carousel (in-page) ---------- */
+
+  function editionCoverPhoto(data) {
+    var g = data.gallery;
+    if (g && g.photos && g.photos.length) return g.photos[0];
+    if (data.heroImage && data.heroImage.trim()) return data.heroImage.trim();
+    return DEFAULT_HERO_IMAGE;
+  }
+
+  function pastEditionLogosHTML(sponsors) {
+    return sponsors.map(function (s) {
+      return '<span class="past-edition__logo"><img src="' + esc(s.logo) +
+        '" alt="' + esc(s.name) + '" loading="lazy" decoding="async" /></span>';
+    }).join("");
+  }
+
+  var DENSE_SPONSOR_THRESHOLD = 10;
+
+  function splitSponsorsFrame(sponsors) {
+    var n = sponsors.length;
+    if (!n) return { mode: "none" };
+    if (n > DENSE_SPONSOR_THRESHOLD) {
+      var mid = Math.ceil(n / 2);
+      return { mode: "dense", top: sponsors.slice(0, mid), bottom: sponsors.slice(mid) };
+    }
+    var q = Math.ceil(n / 4);
+    return {
+      mode: "corners",
+      tl: sponsors.slice(0, q),
+      tr: sponsors.slice(q, q * 2),
+      bl: sponsors.slice(q * 2, q * 3),
+      br: sponsors.slice(q * 3)
+    };
+  }
+
+  function pastEditionFrameHTML(layout) {
+    if (layout.mode === "none") return "";
+    if (layout.mode === "dense") {
+      return (
+        '<div class="past-edition__edge past-edition__edge--top">' + pastEditionLogosHTML(layout.top) + "</div>" +
+        '<div class="past-edition__edge past-edition__edge--bottom">' + pastEditionLogosHTML(layout.bottom) + "</div>"
+      );
+    }
+    var html = "";
+    if (layout.tl.length) {
+      html += '<div class="past-edition__corner past-edition__corner--tl">' + pastEditionLogosHTML(layout.tl) + "</div>";
+    }
+    if (layout.tr.length) {
+      html += '<div class="past-edition__corner past-edition__corner--tr">' + pastEditionLogosHTML(layout.tr) + "</div>";
+    }
+    if (layout.bl.length) {
+      html += '<div class="past-edition__corner past-edition__corner--bl">' + pastEditionLogosHTML(layout.bl) + "</div>";
+    }
+    if (layout.br.length) {
+      html += '<div class="past-edition__corner past-edition__corner--br">' + pastEditionLogosHTML(layout.br) + "</div>";
+    }
+    return html;
+  }
+
+  function pastEditionCardHTML(edition) {
+    var layout = splitSponsorsFrame(edition.sponsors || []);
+    var photo = edition.photo;
+    var denseClass = layout.mode === "dense" ? " past-edition__media--dense" : "";
+    return (
+      '<a class="past-edition__card" href="' + esc(edition.href) + '" aria-label="Edition ' + edition.year + '">' +
+      '<div class="past-edition__media' + denseClass + '">' +
+      '<img class="past-edition__photo" src="' + esc(photo) + '" alt="Java Beer Summit ' + edition.year + '" loading="lazy" />' +
+      '<div class="past-edition__shade" aria-hidden="true"></div>' +
+      '<p class="past-edition__label">Edition ' + edition.year + "</p>" +
+      pastEditionFrameHTML(layout) +
+      "</div></a>"
+    );
+  }
+
+  function pastEditionsHTML(editions) {
+    if (!editions.length) return "";
+    var cards = editions.map(pastEditionCardHTML).join("");
+    return (
+      '<section class="section section-alt" id="past-editions"><div class="wrap">' +
+      sectionHead("past-editions", "The nights before") +
+      '<div class="past-editions" id="past-editions-carousel">' +
+      '<button type="button" class="past-editions__nav past-editions__nav--prev" aria-label="Previous editions" disabled>‹</button>' +
+      '<div class="past-editions__viewport">' +
+      '<div class="past-editions__track">' + cards + "</div>" +
+      "</div>" +
+      '<button type="button" class="past-editions__nav past-editions__nav--next" aria-label="Next editions">›</button>' +
+      "</div></div></section>"
+    );
+  }
+
+  function loadPastEditions(manifest, currentYear) {
+    var pastYears = manifest.years.filter(function (y) { return y < currentYear; });
+    if (!pastYears.length) return Promise.resolve("");
+    return Promise.all(pastYears.map(function (y) {
+      return fetchJSON("/data/" + y + ".json").then(function (data) {
+        return {
+          year: y,
+          href: yearHref(manifest, y),
+          sponsors: data.sponsors || [],
+          photo: editionCoverPhoto(data)
+        };
+      });
+    })).then(function (editions) {
+      editions.sort(function (a, b) { return b.year - a.year; });
+      return pastEditionsHTML(editions);
+    });
+  }
+
+  function initPastEditionsCarousel() {
+    var root = document.getElementById("past-editions-carousel");
+    if (!root) return;
+    var viewport = root.querySelector(".past-editions__viewport");
+    var track = root.querySelector(".past-editions__track");
+    var prev = root.querySelector(".past-editions__nav--prev");
+    var next = root.querySelector(".past-editions__nav--next");
+    if (!viewport || !track || !prev || !next) return;
+
+    var index = 0;
+    var timer = null;
+    var AUTO_MS = 4500;
+
+    function perView() {
+      if (window.matchMedia("(max-width: 36rem)").matches) return 1;
+      if (window.matchMedia("(max-width: 56rem)").matches) return 2;
+      return 3;
+    }
+
+    function maxIndex() {
+      return Math.max(0, track.children.length - perView());
+    }
+
+    function slideStep() {
+      var slide = track.children[0];
+      if (!slide) return 0;
+      var gap = parseFloat(getComputedStyle(track).gap) || 0;
+      return slide.getBoundingClientRect().width + gap;
+    }
+
+    function setSizes() {
+      var pv = perView();
+      var gap = parseFloat(getComputedStyle(track).gap) || 16;
+      var viewW = viewport.clientWidth;
+      var cardW = (viewW - gap * (pv - 1)) / pv;
+      Array.prototype.forEach.call(track.children, function (card) {
+        card.style.width = cardW + "px";
+        card.style.flexBasis = cardW + "px";
+      });
+    }
+
+    function update() {
+      setSizes();
+      var max = maxIndex();
+      if (index > max) index = max;
+      track.style.transform = "translateX(-" + (index * slideStep()) + "px)";
+      prev.disabled = index <= 0;
+      next.disabled = index >= max;
+    }
+
+    function advance() {
+      var max = maxIndex();
+      index = index >= max ? 0 : index + 1;
+      update();
+    }
+
+    function startAuto() {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if (maxIndex() <= 0) return;
+      stopAuto();
+      timer = setInterval(advance, AUTO_MS);
+    }
+
+    function stopAuto() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    prev.addEventListener("click", function () {
+      stopAuto();
+      if (index > 0) { index -= 1; update(); }
+      startAuto();
+    });
+    next.addEventListener("click", function () {
+      stopAuto();
+      if (index < maxIndex()) { index += 1; update(); }
+      startAuto();
+    });
+    root.addEventListener("mouseenter", stopAuto);
+    root.addEventListener("mouseleave", startAuto);
+    root.addEventListener("focusin", stopAuto);
+    root.addEventListener("focusout", startAuto);
+    window.addEventListener("resize", update);
+    update();
+    startAuto();
+  }
+
   /* ---------- boot ---------- */
 
   function boot() {
@@ -742,13 +940,14 @@
 
     fetchJSON("/data/manifest.json").then(function (manifest) {
       var year = pathYear ? Number(pathYear[1]) : manifest.latest;
+      var pastYears = manifest.years.filter(function (y) { return y < year; });
       return fetchJSON("/data/" + year + ".json").then(function (data) {
         var status = computeStatus(data);
 
         document.title = data.title + " " + data.year + " — " + data.location.city;
 
         renderYearSwitcher(manifest, year);
-        renderNav(data, status);
+        renderNav(data, status, { showPastEditions: pastYears.length > 0 });
         renderBanner(manifest, data, status);
 
         main.innerHTML =
@@ -758,7 +957,8 @@
           ctaSectionsHTML(data, status) +
           sponsorsHTML(data, status) +
           locationHTML(data) +
-          galleryHTML(data);
+          galleryHTML(data) +
+          '<div id="past-editions-mount"></div>';
         main.removeAttribute("aria-busy");
 
         document.getElementById("site-footer").innerHTML = footerHTML(manifest, data);
@@ -770,6 +970,17 @@
         initReveal();
         initScrollProgress();
         initStringLights();
+
+        return loadPastEditions(manifest, year).then(function (html) {
+          var mount = document.getElementById("past-editions-mount");
+          if (!mount) return;
+          if (html) {
+            mount.outerHTML = html;
+            initPastEditionsCarousel();
+          } else {
+            mount.remove();
+          }
+        });
       });
     }).catch(function (err) {
       main.removeAttribute("aria-busy");
