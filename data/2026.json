@@ -2,20 +2,20 @@
   "year": 2026,
   "title": "Java Beer Summit",
   "tagline": "The biggest summer Java event in Sofia",
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "doorsOpen": "17:30",
   "statusOverride": null,
   "location": {
-    "name": "TBA",
+    "name": "Toplocentrala — Regional Centre for Contemporary Arts",
     "city": "Sofia, Bulgaria",
-    "address": "TBA",
-    "description": "Venue to be announced — check back soon.",
-    "directions": "",
-    "mapEmbed": null,
-    "mapLink": null
+    "address": "5 Emil Bersinski St., 1408 Sofia",
+    "description": "A cultural hub in a former heat plant near South Park — indoor galleries, outdoor terraces, and the Bar Stage for exactly this kind of summer evening.",
+    "directions": "Near South Park and the Hilton. Trams 1, 6, 7 (Blvd. P. Slaveykov); buses 72, 76, 102, 204, 304, 604 (Blvd. Cherni Vrah); metro M2 (European Union).",
+    "mapEmbed": "https://maps.google.com/maps?q=42.68015,23.31562&hl=en&z=17&output=embed",
+    "mapLink": "https://goo.gl/maps/Fh1xiMtp77ekAKD78"
   },
   "about": {
-    "intro": "Java Beer Summit is an annual event co-organized by the [Bulgarian Java User Group](https://jug.bg) and [Codexio](https://codexio.bg). It brings the Java community together in an informal setting, aiming to strengthen bonds within the community and welcome new people into it. The audience mainly consists of Java community supporters and newcomers drawn into their orbit. The event takes place in the open-air bar usually in Borissova Garden. The exact venue will be soon announced. It will be on August 25, 2026. There is a stage where short talks are held with the goal of lifting the mood of attendees.",
+    "intro": "Java Beer Summit is an annual event co-organized by the [Bulgarian Java User Group](https://jug.bg) and [Codexio](https://codexio.bg). It brings the Java community together in an informal setting, aiming to strengthen bonds within the community and welcome new people into it. The audience mainly consists of Java community supporters and newcomers drawn into their orbit. The 2026 edition is on 26 August at [Toplocentrala](https://toplocentrala.bg) — the Regional Centre for Contemporary Arts near South Park. There is a stage where short talks are held with the goal of lifting the mood of attendees.",
     "highlights": []
   },
   "organizers": [
