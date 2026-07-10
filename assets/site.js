@@ -450,7 +450,7 @@
       '<div class="location-grid">' +
       '<div class="location-info">' +
       "<h3>" + esc(loc.name) + "</h3>" +
-      '<p class="city">📍 ' + esc(loc.address) + " · " + esc(loc.city) + "</p>" +
+      '<p class="city">📍 ' + esc(loc.address) + "</p>" +
       "<p>" + esc(loc.description) + "</p>" +
       (loc.directions ? '<p class="directions">🧭 ' + esc(loc.directions) + "</p>" : "") +
       (loc.mapLink ? '<p class="map-link"><a href="' + esc(loc.mapLink) + '" target="_blank" rel="noopener">open in Google Maps ↗</a></p>' : "") +
