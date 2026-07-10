@@ -816,7 +816,7 @@
     var cards = editions.map(pastEditionCardHTML).join("");
     return (
       '<section class="section section-alt" id="past-editions"><div class="wrap">' +
-      sectionHead("past-editions", "Past editions") +
+      sectionHead("past-editions", "The nights before") +
       '<div class="past-editions" id="past-editions-carousel">' +
       '<button type="button" class="past-editions__nav past-editions__nav--prev" aria-label="Previous editions" disabled>‹</button>' +
       '<div class="past-editions__viewport">' +
