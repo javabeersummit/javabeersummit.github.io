@@ -3,7 +3,7 @@
   "title": "Java Beer Summit",
   "tagline": "The biggest summer Java event in Sofia",
   "date": "2026-08-26",
-  "doorsOpen": "17:30",
+  "doorsOpen": "18:00",
   "statusOverride": null,
   "location": {
     "name": "Toplocentrala",
@@ -41,48 +41,38 @@
   },
   "schedule": [
     {
-      "time": "17:30",
+      "time": "18:00–19:00",
       "type": "break",
-      "title": "Doors open — first pour"
+      "title": "Check-in"
     },
     {
-      "time": "18:00",
+      "time": "19:00–19:30",
       "type": "break",
-      "title": "Welcome toast from the organisers"
+      "title": "Opening",
+      "abstract": "Welcome by Yoana Borissova."
     },
     {
-      "time": "18:15",
+      "time": "19:30–20:30",
+      "type": "break",
+      "title": "Networking"
+    },
+    {
+      "time": "20:30–21:30",
       "type": "talk",
-      "title": "TBA",
-      "speaker": "TBA"
+      "title": "AI in everyday life",
+      "speaker": "Ivan Yonkov, Martin Georgiev, Martin Paunov, Kiril Kirilov",
+      "abstract": "Discussion panel."
     },
     {
-      "time": "18:45",
-      "type": "talk",
-      "title": "TBA",
-      "speaker": "TBA"
-    },
-    {
-      "time": "19:15",
-      "type": "break",
-      "title": "Beer break — refill round"
-    },
-    {
-      "time": "19:30",
+      "time": "21:30–22:00",
       "type": "lightning",
-      "title": "TBA",
-      "speaker": "TBA"
+      "title": "Open Mic",
+      "abstract": "The stage is yours — grab a beer and come up."
     },
     {
-      "time": "20:00",
-      "type": "talk",
-      "title": "TBA",
-      "speaker": "TBA"
-    },
-    {
-      "time": "20:30",
+      "time": "22:00–00:00",
       "type": "break",
-      "title": "Open bar hangout until the lights go out"
+      "title": "More networking"
     }
   ],
   "sponsors": [],
