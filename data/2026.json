@@ -5,6 +5,7 @@
   "date": "2026-08-26",
   "doorsOpen": "18:00",
   "statusOverride": null,
+  "thankYou": "// thanks for coming — see you next summer! 🍻",
   "location": {
     "name": "Toplocentrala",
     "city": "Sofia, Bulgaria",
@@ -15,8 +16,29 @@
     "mapLink": "https://goo.gl/maps/Fh1xiMtp77ekAKD78"
   },
   "about": {
-    "intro": "Java Beer Summit is an annual event co-organized by the [Bulgarian Java User Group](https://jug.bg) and [Codexio](https://codexio.bg). It brings the Java community together in an informal setting, aiming to strengthen bonds within the community and welcome new people into it. The audience mainly consists of Java community supporters and newcomers drawn into their orbit. The 2026 edition is on 26 August at [Toplocentrala](https://toplocentrala.bg) near South Park. There is a stage where short talks are held with the goal of lifting the mood of attendees.",
-    "highlights": []
+    "intro": "Thank you to everyone who joined us at [Toplocentrala](https://toplocentrala.bg) on 26 August — short talks, cold beers, and a packed evening with the Java community. Java Beer Summit is an annual event co-organized by the [Bulgarian Java User Group](https://jug.bg) and [Codexio](https://codexio.bg). It brings people together in an informal setting, strengthens bonds within the community, and welcomes newcomers into it.",
+    "highlights": [
+      {
+        "icon": "🙏",
+        "title": "Thanks for coming",
+        "text": "To everyone who checked in, poured a beer, joined the panel, or grabbed the open mic — you made the night."
+      },
+      {
+        "icon": "🎤",
+        "title": "Panel & open mic",
+        "text": "A discussion panel on AI in everyday life, then the stage open for whoever had something to say."
+      },
+      {
+        "icon": "🤝",
+        "title": "Networking first",
+        "text": "Plenty of room to catch up, meet new people, and keep the conversation going until midnight."
+      },
+      {
+        "icon": "📍",
+        "title": "Toplocentrala",
+        "text": "A former heat plant near South Park — galleries, terraces, and the Bar Stage for a summer evening like this."
+      }
+    ]
   },
   "organizers": [
     {
@@ -78,7 +100,7 @@
   "sponsors": [],
   "sponsorContact": "java.beer@codexio.bg",
   "sponsorPackages": {
-    "show": true,
+    "show": false,
     "formUrl": "https://forms.cloud.microsoft/e/QQ68SPK9qU",
     "intro": "The event is free for attendees — sponsors are what keep the kegs full and the projector running. Here's what's on tap for 2026:",
     "packages": [
@@ -110,5 +132,34 @@
       }
     ]
   },
-  "gallery": null
+  "gallery": {
+    "photos": [
+      "/gallery/2026/photo-01.jpg",
+      "/gallery/2026/photo-02.jpg",
+      "/gallery/2026/photo-03.jpg",
+      "/gallery/2026/photo-04.jpg",
+      "/gallery/2026/photo-05.jpg",
+      "/gallery/2026/photo-06.jpg",
+      "/gallery/2026/photo-07.jpeg",
+      "/gallery/2026/photo-08.jpeg",
+      "/gallery/2026/photo-09.jpeg",
+      "/gallery/2026/photo-10.jpeg",
+      "/gallery/2026/photo-11.jpeg",
+      "/gallery/2026/photo-12.jpeg",
+      "/gallery/2026/photo-13.jpeg",
+      "/gallery/2026/photo-14.jpeg",
+      "/gallery/2026/photo-15.jpeg",
+      "/gallery/2026/photo-16.jpeg"
+    ],
+    "videos": [
+      {
+        "title": "Java Beer Summit 2026 — clip 1",
+        "src": "/gallery/2026/video-01.mov"
+      },
+      {
+        "title": "Java Beer Summit 2026 — clip 2",
+        "src": "/gallery/2026/video-02.mov"
+      }
+    ]
+  }
 }

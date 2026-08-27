@@ -132,7 +132,8 @@ h1, h2, h3 { line-height: 1.15; font-weight: 750; margin: 0 0 0.5em; }
 
 .hero {
   background: none;
-  min-height: 100svh;
+  /* Fit under the sticky header so the thank-you line isn't clipped */
+  min-height: calc(100svh - 3.75rem);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -143,16 +144,17 @@ h1, h2, h3 { line-height: 1.15; font-weight: 750; margin: 0 0 0.5em; }
   position: relative;
   z-index: 1;
   flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5.5rem 0 2rem;
+  padding: 1.25rem 0 0.75rem;
 }
 
 .hero-kicker {
   font-family: var(--font-mono); font-size: 0.9rem; color: var(--muted);
   display: inline-flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 .hero-kicker .chip {
   background: rgba(255, 179, 71, 0.24);
@@ -166,8 +168,8 @@ h1, h2, h3 { line-height: 1.15; font-weight: 750; margin: 0 0 0.5em; }
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 7vw, 4.8rem);
-  font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.2em;
+  font-size: clamp(2.2rem, 6vw, 4.4rem);
+  font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.15em;
   color: var(--ink);
   text-shadow:
     0 1px 3px rgba(0, 0, 0, 0.85),
@@ -181,21 +183,21 @@ h1, h2, h3 { line-height: 1.15; font-weight: 750; margin: 0 0 0.5em; }
 }
 
 .hero-tagline {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
   color: var(--ink);
-  margin: 0 auto 2rem; max-width: 38rem;
+  margin: 0 auto 1.25rem; max-width: 38rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 3px 14px rgba(0, 0, 0, 0.35);
 }
 
 .hero-ctas {
   display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 /* countdown */
 .countdown {
   display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 .countdown .cell {
   background: var(--card); border: 1px solid var(--line); border-radius: 0.8rem;
@@ -211,12 +213,16 @@ h1, h2, h3 { line-height: 1.15; font-weight: 750; margin: 0 0 0.5em; }
   color: var(--muted);
 }
 .hero-over {
-  font-family: var(--font-mono); color: var(--muted); margin-bottom: 3rem;
+  font-family: var(--font-mono); color: var(--muted);
+  margin: 0 0 0.5rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* foam wave divider */
-.foam { display: block; width: 100%; margin-bottom: -1px; position: relative; z-index: 1; flex-shrink: 0; }
+.foam {
+  display: block; width: 100%; height: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: -1px; position: relative; z-index: 1; flex-shrink: 0;
+}
 .foam path { fill: var(--bg); }
 
 /* ---------- sections ---------- */
@@ -968,10 +974,10 @@ h1, h2, h3 { line-height: 1.15; font-weight: 750; margin: 0 0 0.5em; }
 
 /* clinking mugs (hero + 404). Click = another round. */
 .clink {
-  display: flex; justify-content: center; margin-bottom: 1.8rem; cursor: pointer;
+  display: flex; justify-content: center; margin-bottom: 1rem; cursor: pointer;
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.35));
 }
-.clink svg { width: min(280px, 62vw); height: auto; overflow: visible; }
+.clink svg { width: min(220px, 48vw); height: auto; overflow: visible; }
 .clink .glass, .clink .foam-c { fill: var(--foam); stroke: var(--amber-strong); stroke-width: 3; }
 .clink .handle { fill: none; stroke: var(--amber-strong); stroke-width: 7; }
 .clink .beer { fill: var(--amber); }

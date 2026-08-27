@@ -68,18 +68,32 @@
 
   /* ---------- header: nav + year switcher ---------- */
 
+  function hasGallery(data) {
+    var g = data.gallery;
+    if (!g) return false;
+    return (g.photos && g.photos.length) || (g.videos && g.videos.length);
+  }
+
+  function hasSponsorsSection(data, status) {
+    if ((data.sponsors || []).length) return true;
+    var sp = data.sponsorPackages;
+    return status === "upcoming" && !!(sp && sp.show && (sp.packages || []).length);
+  }
+
   function renderNav(data, status, opts) {
     opts = opts || {};
     var items = [
       ["#about", "About"],
-      ["#schedule", "Schedule"],
-      ["#sponsors", "Sponsors"],
-      ["#location", "Location"]
+      ["#schedule", "Schedule"]
     ];
+    if (hasSponsorsSection(data, status)) {
+      items.push(["#sponsors", "Sponsors"]);
+    }
+    items.push(["#location", "Location"]);
     if (opts.showPastEditions) {
       items.push(["#past-editions", "Past editions"]);
     }
-    if (data.gallery && data.gallery.photos && data.gallery.photos.length) {
+    if (hasGallery(data)) {
       items.push(["#gallery", "Gallery"]);
     }
     /* CFP + Register sit at the end as button-like CTAs: Register is the solid
@@ -110,7 +124,9 @@
   }
 
   function renderBanner(manifest, data, status) {
-    if (status !== "past") return;
+    /* Only for past editions that aren't the current latest — the home
+       page stays clean after the event wraps. */
+    if (status !== "past" || data.year === manifest.latest) return;
     document.getElementById("archive-banner").innerHTML =
       '<div class="archive-banner">📦 You are browsing the <strong>' + data.year +
       '</strong> archive — <a href="/">jump to the ' + manifest.latest + " edition</a></div>";
@@ -186,13 +202,15 @@
           ? '<div class="countdown" id="countdown" aria-label="Countdown to the event"></div>'
           : "");
     } else {
-      var gallery = data.gallery && data.gallery.photos && data.gallery.photos.length;
+      var gallery = hasGallery(data);
       ctas =
         '<div class="hero-ctas">' +
         (gallery ? '<a class="btn btn-primary" href="#gallery">📸 Relive it — photos</a>' : "") +
         '<a class="btn btn-secondary" href="#schedule">What happened</a>' +
         "</div>" +
-        '<p class="hero-over">// this edition is a wrap — thanks for coming! 🍻</p>';
+        '<p class="hero-over">' +
+        esc(data.thankYou || "// this edition is a wrap — thanks for coming! 🍻") +
+        "</p>";
     }
 
     return (
@@ -370,6 +388,9 @@
 
   function sponsorsHTML(data, status) {
     var sponsors = data.sponsors || [];
+    var packages = packagesHTML(data, status);
+    if (!sponsors.length && !packages) return "";
+
     /* the tier field is optional — known tiers render in TIER_ORDER with a
        heading, untiered sponsors render as one plain grid */
     var tierNames = [];
@@ -391,7 +412,6 @@
       );
     }).join("");
 
-    var packages = packagesHTML(data, status);
     var cta = "";
     if (!packages && status === "upcoming" && data.sponsorContact) {
       cta = '<p class="sponsor-cta">Want your logo here, on the cups and in a few hundred developers’ good books? ' +
@@ -401,7 +421,7 @@
     return (
       '<section class="section" id="sponsors"><div class="wrap">' +
       sectionHead("sponsors", status === "upcoming" ? "Brought to you by" : "The " + data.year + " sponsors") +
-      (tiers || '<p class="sponsor-cta">Sponsors TBA.</p>') +
+      (tiers || (packages ? "" : '<p class="sponsor-cta">Sponsors TBA.</p>')) +
       cta +
       packages +
       "</div></section>"
@@ -498,8 +518,8 @@
 
   function galleryHTML(data) {
     var g = data.gallery;
-    if (!g || !g.photos || !g.photos.length) return "";
-    var photos = g.photos.map(function (src, i) {
+    if (!hasGallery(data)) return "";
+    var photos = (g.photos || []).map(function (src, i) {
       return (
         '<button type="button" data-photo-index="' + i + '">' +
         '<img src="' + esc(src) + '" alt="Java Beer Summit ' + data.year + " — photo " + (i + 1) + '" loading="lazy" />' +
@@ -711,6 +731,7 @@
     var grid = document.getElementById("photo-grid");
     var box = document.getElementById("lightbox");
     if (!grid || !box || !box.showModal) return;
+    if (!data.gallery || !data.gallery.photos || !data.gallery.photos.length) return;
     var img = document.getElementById("lightbox-img");
     var photos = data.gallery.photos;
     var index = 0;
